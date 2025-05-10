@@ -45,6 +45,14 @@ header {
   height: auto;
   max-height: 45px;
   margin-right: 10px;
+  max-width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 nav a {
@@ -61,13 +69,12 @@ nav a {
 /* Hero Section */
 .hero {
   background: url('../Images/Pressure%20Washing%20Image.jpg') no-repeat center 70%;
-  background-size: 130%; /* 🔥 zoom in 30% */
+  background-size: cover;
   color: white;
   text-align: center;
   padding: 5rem 2rem;
   position: relative;
 }
-
 
 .hero::after {
   content: '';
@@ -85,13 +92,11 @@ nav a {
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+  font-size: clamp(2rem, 5vw + 1rem, 3rem);
 }
 
 .hero p {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: clamp(1rem, 3vw + 0.5rem, 1.5rem);
 }
 
 .quote-btn {
@@ -186,7 +191,7 @@ footer {
 /* Backgrounds for Individual Pages */
 .residential-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('../Images/Commercial Building.jpg') no-repeat center center/cover;
+    url('../Images/Commercial%20Building.jpg') no-repeat center center/cover;
   color: white;
   padding: 6rem 2rem;
   text-align: center;
@@ -245,7 +250,7 @@ nav .dropdown-content a:hover {
   flex: 1;
   max-width: 50%;
   text-align: left;
-  padding-left: 2rem; /* ✅ better than margin-left for inner spacing */
+  padding-left: 2rem;
 }
 
 .residential-image {
@@ -259,7 +264,7 @@ nav .dropdown-content a:hover {
 .residential-image img {
   width: auto;
   height: auto;
-  max-width: 90%; /* ✅ increase from 80% to 90% */
+  max-width: 90%;
   max-height: 100%;
   display: block;
   object-fit: contain;
@@ -314,8 +319,8 @@ nav .dropdown-content a:hover {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background-color: #ffc107; /* Yellow */
-  color: #000; /* Black text for contrast */
+  background-color: #ffc107;
+  color: #000;
   text-decoration: none;
   font-weight: 600;
   border-radius: 5px;
@@ -323,5 +328,62 @@ nav .dropdown-content a:hover {
 }
 
 .pricing-btn:hover {
-  background-color: #e0a800; /* Darker yellow on hover */
+  background-color: #e0a800;
+}
+
+/* 🔥 RESPONSIVE MOBILE FIXES */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .phone {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .hero {
+    background-position: center;
+    background-size: cover;
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.8rem, 6vw + 1rem, 2.5rem);
+  }
+
+  .hero p {
+    font-size: clamp(1rem, 4vw + 0.5rem, 1.2rem);
+  }
+
+  .residential-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .residential-text,
+  .residential-image {
+    max-width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text,
+  .about-image {
+    width: 100%;
+    padding: 1rem 0;
+  }
 }
