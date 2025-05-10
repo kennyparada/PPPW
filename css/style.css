@@ -48,7 +48,17 @@ header {
   max-width: 100%;
 }
 
-nav {
+/* 🌟 MENU TOGGLE BUTTON */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none; /* hidden on desktop */
+}
+
+.menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -333,9 +343,21 @@ nav .dropdown-content a:hover {
 
 /* 🔥 RESPONSIVE MOBILE FIXES */
 @media (max-width: 768px) {
-  header {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    background-color: #003366;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .menu.show {
+    display: flex;
   }
 
   nav {
