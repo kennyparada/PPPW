@@ -186,7 +186,7 @@ footer {
 /* Backgrounds for Individual Pages */
 .residential-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('..Images/Commercial Building.jpg') no-repeat center center/cover;
+    url('../Images/Commercial Building.jpg') no-repeat center center/cover;
   color: white;
   padding: 6rem 2rem;
   text-align: center;
@@ -194,7 +194,7 @@ footer {
 
 .commercial-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('..Images/Brick.webp') no-repeat center center/cover;
+    url('../Images/Brick.webp') no-repeat center center/cover;
   color: white;
   padding: 6rem 2rem;
   text-align: center;
