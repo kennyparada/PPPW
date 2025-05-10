@@ -78,6 +78,16 @@
   <footer>
     <p>&copy; 2025 Potomac Pressure Washing. All rights reserved.</p>
   </footer>
+<script>
+  const dropdownLink = document.querySelector('.dropdown > a');
+  const dropdownContent = document.querySelector('.dropdown-content');
 
+  dropdownLink.addEventListener('click', function (e) {
+    e.preventDefault(); // stop link navigation
+    dropdownContent.classList.toggle('show-dropdown');
+  });
+</script>
+
+  
 </body>
 </html>
