@@ -60,7 +60,7 @@ nav a {
 
 /* Hero Section */
 .hero {
-  background: url('../Images/Pressure Washing Image.jpg') no-repeat center 70%;
+  background: url('../Images/Pressure%20Washing%20Image.jpg') no-repeat center 70%;
   background-size: 130%; /* 🔥 zoom in 30% */
   color: white;
   text-align: center;
