@@ -408,4 +408,27 @@ nav .dropdown-content a:hover {
     width: 100%;
     padding: 1rem 0;
   }
+  .about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.about-text {
+  width: 50%;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.about-image {
+  width: 50%;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 }
