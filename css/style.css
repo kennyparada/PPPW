@@ -426,8 +426,10 @@ nav .dropdown-content a:hover {
     display: none;
   }
 
-  nav .dropdown.show-dropdown .dropdown-content {
+  nav .dropdown-content.show-dropdown {
     display: flex;
+    flex-direction: column;
+    position: relative;
   }
 
   nav .dropdown-content a {
