@@ -23,27 +23,27 @@
 
     <button class="menu-toggle">&#9776;</button>
 
-    <nav class="side-menu">
-      <button class="close-menu">&times;</button>
-      <a href="index.html">Home</a>
-
-      <div class="dropdown">
-        <button class="dropdown-toggle">Services</button>
-        <div class="dropdown-content">
-          <a href="residential.html">Residential</a>
-          <a href="commercial.html">Commercial</a>
-          <a href="what-we-clean.html">What We Clean</a>
-        </div>
-      </div>
-
-      <a href="pricing.html">Pricing</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <div class="phone-mobile">Call: <a href="tel:9195926347">919-592-6347</a></div>
-    </nav>
-
     <div class="phone desktop-phone">Call: <a href="tel:9195926347">919-592-6347</a></div>
   </header>
+
+  <!-- ✅ Sidebar Mobile Menu -->
+  <nav id="side-menu" class="side-menu">
+    <button class="close-menu">&times;</button>
+    <a href="index.html">Home</a>
+
+    <button class="dropdown-toggle">Services</button>
+    <div class="dropdown-content">
+      <a href="residential.html">Residential</a>
+      <a href="commercial.html">Commercial</a>
+      <a href="what-we-clean.html">What We Clean</a>
+    </div>
+
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+
+    <div class="phone-mobile">Call: <a href="tel:9195926347">919-592-6347</a></div>
+  </nav>
 
   <section class="hero">
     <div class="hero-content">
@@ -62,10 +62,11 @@
     <p>&copy; 2025 Potomac Pressure Washing. All rights reserved.</p>
   </footer>
 
+  <!-- ✅ Sidebar Menu Script -->
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const closeMenu = document.querySelector('.close-menu');
-    const menu = document.querySelector('.side-menu');
+    const menu = document.getElementById('side-menu');
     const dropdownToggle = document.querySelector('.dropdown-toggle');
     const dropdownContent = document.querySelector('.dropdown-content');
 
