@@ -1,10 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>What We Clean</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -17,30 +22,32 @@
       </a>
     </div>
     <nav>
-      <button class="menu-toggle">&#9776;</button>
+      <button class="menu-toggle">&#9776;</button> <!-- hamburger icon -->
       <div class="menu">
         <a href="index.html">Home</a>
-        <div class="dropdown">
-          <a href="#">Services</a>
-          <div class="dropdown-content">
-            <a href="residential.html">Residential</a>
-            <a href="commercial.html">Commercial</a>
-            <a href="what-we-clean.html">What We Clean</a>
+          <div class="dropdown">
+            <a href="#">Services</a>
+            <div class="dropdown-content">
+              <a href="residential.html">Residential</a>
+              <a href="commercial.html">Commercial</a>
+              <a href="what-we-clean.html">What We Clean</a>
+            </div>
           </div>
-        </div>
         <a href="pricing.html">Pricing</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
-    </nav>
+    </nav>    
     <div class="phone">Call: <a href="tel:9195926347">919-592-6347</a></div>
   </header>
 
+  <!-- Hero Banner -->
   <section class="residential-bg">
     <h1>What We Clean</h1>
     <p>From homes to storefronts — we clean it all with care and precision.</p>
   </section>
 
+  <!-- Side-by-side content -->
   <section class="residential-info">
     <div class="residential-text">
       <h2>Our Cleaning Services</h2>
@@ -58,6 +65,8 @@
         Regular cleaning not only boosts curb appeal but also helps extend the life of your property’s surfaces. We tailor every service to fit your needs.
       </p>
       <p><strong>Let us take the dirt off your hands—contact us today!</strong></p>
+
+      <!-- Schedule button -->
       <a href="contact.html?message=Hi%2C%20I%27m%20interested%20in%20your%20cleaning%20services.%20Please%20tell%20me%20more%20about%20availability%20and%20pricing." class="schedule-btn">
         Schedule Service
       </a>
@@ -72,19 +81,14 @@
   </footer>
 
   <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
-    });
+  const dropdownLink = document.querySelector('.dropdown > a');
+  const dropdownContent = document.querySelector('.dropdown-content');
 
-    const dropdownLink = document.querySelector('.dropdown > a');
-    const dropdownContent = document.querySelector('.dropdown-content');
-    dropdownLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      dropdownContent.classList.toggle('show-dropdown');
-    });
-  </script>
+  dropdownLink.addEventListener('click', function (e) {
+    e.preventDefault(); // stop link navigation
+    dropdownContent.classList.toggle('show-dropdown');
+  });
+</script>
 
 </body>
 </html>
