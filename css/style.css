@@ -250,27 +250,23 @@ footer {
 
 /* About / Residential Sections */
 .about-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
-.about-text {
-  width: 50%;
-  text-align: left;
-  padding-left: 2rem;
-}
-
+.about-text,
 .about-image {
-  width: 50%;
+  width: 100%;
+  padding: 1rem 0;
 }
 
 .about-image img {
-  width: 150px;
+  width: 120px;
   height: auto;
-  border-radius: 8px;
+  margin-bottom: 1rem;
 }
+
 
 .residential-info {
   display: flex;
