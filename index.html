@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Potomac Pressure Washing</title>
 
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/PPPW/css/style.css">
 </head>
 <body>
+
   <header>
     <div class="logo">
       <a href="index.html">
@@ -20,27 +21,28 @@
       </a>
     </div>
 
-    <nav>
-      <button class="menu-toggle">&#9776;</button>
-      <div class="menu">
-        <a href="index.html">Home</a>
+    <button class="menu-toggle">&#9776;</button>
 
-        <div class="dropdown">
-          <a href="#">Services</a>
-          <div class="dropdown-content">
-            <a href="residential.html">Residential</a>
-            <a href="commercial.html">Commercial</a>
-            <a href="what-we-clean.html">What We Clean</a>
-          </div>
+    <nav class="side-menu">
+      <button class="close-menu">&times;</button>
+      <a href="index.html">Home</a>
+
+      <div class="dropdown">
+        <button class="dropdown-toggle">Services</button>
+        <div class="dropdown-content">
+          <a href="residential.html">Residential</a>
+          <a href="commercial.html">Commercial</a>
+          <a href="what-we-clean.html">What We Clean</a>
         </div>
-
-        <a href="pricing.html">Pricing</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
       </div>
+
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <div class="phone-mobile">Call: <a href="tel:9195926347">919-592-6347</a></div>
     </nav>
 
-    <div class="phone">Call: <a href="tel:9195926347">919-592-6347</a></div>
+    <div class="phone desktop-phone">Call: <a href="tel:9195926347">919-592-6347</a></div>
   </header>
 
   <section class="hero">
@@ -62,18 +64,23 @@
 
   <script>
     const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
-    });
-
-    const dropdownLink = document.querySelector('.dropdown > a');
+    const closeMenu = document.querySelector('.close-menu');
+    const menu = document.querySelector('.side-menu');
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
     const dropdownContent = document.querySelector('.dropdown-content');
 
-    dropdownLink.addEventListener('click', function (e) {
-      e.preventDefault();
+    toggle.addEventListener('click', () => {
+      menu.classList.add('open');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      menu.classList.remove('open');
+    });
+
+    dropdownToggle.addEventListener('click', () => {
       dropdownContent.classList.toggle('show-dropdown');
     });
   </script>
+
 </body>
 </html>
