@@ -55,7 +55,7 @@ header {
   color: white;
   font-size: 2rem;
   cursor: pointer;
-  display: none; /* hidden on desktop */
+  display: none;
 }
 
 .menu {
@@ -121,6 +121,15 @@ nav a {
 
 .quote-btn:hover {
   background-color: #e6b800;
+}
+
+/* ✅ Pricing Page Background */
+.pricing-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+              url('../Images/Pressure Washing Image.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
 }
 
 /* Content Section */
@@ -248,6 +257,7 @@ nav .dropdown-content a:hover {
   background-color: #005299;
 }
 
+/* About / Residential Sections */
 .residential-info {
   display: flex;
   justify-content: space-between;
@@ -408,11 +418,4 @@ nav .dropdown-content a:hover {
     width: 100%;
     padding: 1rem 0;
   }
-
-  .pricing-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-              url('../Images/Pressure Washing Image.jpg') no-repeat center center/cover;
-  color: white;
-  padding: 6rem 2rem;
-  text-align: center;
 }
