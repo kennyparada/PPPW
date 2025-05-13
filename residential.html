@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Residential Pressure Washing</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header>
     <div class="logo">
       <a href="index.html">
-        <img src="Images/LogoTransparent.png" alt="Logo" class="logo-img">
+        <img src="Images/LogoTransparent.png" alt="Potomac Pressure Washing Logo" class="logo-img">
         Potomac Pressure Washing
       </a>
     </div>
@@ -20,14 +24,9 @@
       <button class="menu-toggle">&#9776;</button>
       <div class="menu">
         <a href="index.html">Home</a>
-        <div class="dropdown">
-          <a href="#">Services</a>
-          <div class="dropdown-content">
-            <a href="residential.html">Residential</a>
-            <a href="commercial.html">Commercial</a>
-            <a href="what-we-clean.html">What We Clean</a>
-          </div>
-        </div>
+        <a href="residential.html">Residential</a>
+        <a href="commercial.html">Commercial</a>
+        <a href="what-we-clean.html">What We Clean</a>
         <a href="pricing.html">Pricing</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
@@ -54,10 +53,12 @@
         Whether you're preparing to sell, refreshing for the season, or simply want a cleaner home, trust Potomac Pressure Washing to deliver reliable, high-quality results throughout Alexandria and surrounding areas.
       </p>
       <p><strong>Protect your investment—contact us today for a free quote!</strong></p>
+
       <a href="contact.html?message=Hi%2C%20I'd%20like%20to%20schedule%20a%20residential%20pressure%20washing%20appointment.%20What%20time%20do%20you%20guys%20have%20available%3F" class="schedule-btn">
         Schedule Service
       </a>
     </div>
+
     <div class="residential-image">
       <img src="Images/RezPic.jpg" alt="Residential pressure washing in action">
     </div>
@@ -70,17 +71,8 @@
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
-
     toggle.addEventListener('click', () => {
       menu.classList.toggle('show');
-    });
-
-    const dropdownLink = document.querySelector('.dropdown > a');
-    const dropdownContent = document.querySelector('.dropdown-content');
-
-    dropdownLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      dropdownContent.classList.toggle('show-dropdown');
     });
   </script>
 
