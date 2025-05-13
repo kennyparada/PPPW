@@ -250,6 +250,7 @@ footer {
 
 /* About / Residential Sections */
 .about-section {
+  display: flex;
   flex-direction: column;
   text-align: center;
   padding: 2rem 1rem;
@@ -261,12 +262,16 @@ footer {
   padding: 1rem 0;
 }
 
+.about-image {
+  display: flex;
+  justify-content: center;
+}
+
 .about-image img {
   width: 120px;
   height: auto;
   margin-bottom: 1rem;
 }
-
 
 .residential-info {
   display: flex;
