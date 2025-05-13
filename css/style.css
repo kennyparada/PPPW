@@ -48,14 +48,14 @@ header {
   max-width: 100%;
 }
 
-/* 🌟 MENU TOGGLE BUTTON */
+/* Menu Toggle Button (Mobile) */
 .menu-toggle {
   background: none;
   border: none;
   color: white;
   font-size: 2rem;
   cursor: pointer;
-  display: none; /* hidden on desktop */
+  display: none;
 }
 
 .menu {
@@ -74,6 +74,39 @@ nav a {
 .phone a {
   color: white;
   font-weight: bold;
+}
+
+/* Dropdown container */
+nav .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+nav .dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  background-color: #003366;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+nav .dropdown-content a {
+  color: white;
+  padding: 0.75rem 1rem;
+  display: block;
+  text-align: left;
+}
+
+nav .dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+nav .dropdown-content a:hover {
+  background-color: #005299;
 }
 
 /* Hero Section */
@@ -123,6 +156,14 @@ nav a {
   background-color: #e6b800;
 }
 
+/* Footer */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
 /* Content Section */
 .content,
 .services {
@@ -138,14 +179,6 @@ nav a {
 .services li {
   margin: 0.5rem 0;
   font-weight: 500;
-}
-
-/* Footer */
-footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 1rem;
 }
 
 /* Contact Page Styling */
@@ -215,37 +248,28 @@ footer {
   text-align: center;
 }
 
-/* Dropdown container */
-nav .dropdown {
-  position: relative;
-  display: inline-block;
+/* About / Residential Sections */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
 }
 
-nav .dropdown-content {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  background-color: #003366;
-  min-width: 150px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 20;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-nav .dropdown-content a {
-  color: white;
-  padding: 0.75rem 1rem;
-  display: block;
+.about-text {
+  width: 50%;
   text-align: left;
+  padding-left: 2rem;
 }
 
-nav .dropdown:hover .dropdown-content {
-  opacity: 1;
-  visibility: visible;
+.about-image {
+  width: 50%;
 }
 
-nav .dropdown-content a:hover {
-  background-color: #005299;
+.about-image img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
 }
 
 .residential-info {
@@ -302,29 +326,7 @@ nav .dropdown-content a:hover {
   padding: 2rem;
 }
 
-.about-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
-}
-
-.about-text {
-  width: 50%;
-  text-align: left;
-  padding-right: 2rem;
-}
-
-.about-image {
-  width: 50%;
-}
-
-.about-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
+/* Pricing Button */
 .pricing-btn {
   display: inline-block;
   margin-top: 1rem;
@@ -341,7 +343,7 @@ nav .dropdown-content a:hover {
   background-color: #e0a800;
 }
 
-/* 🔥 RESPONSIVE MOBILE FIXES */
+/* 🔥 Responsive Fixes for Mobile */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -352,12 +354,22 @@ nav .dropdown-content a:hover {
     flex-direction: column;
     width: 100%;
     background-color: #003366;
-    padding: 1rem 0;
     text-align: center;
+    padding: 1rem 0;
   }
 
   .menu.show {
     display: flex;
+  }
+
+  .dropdown-content {
+    display: none;
+    background-color: #003366;
+    padding-left: 1rem;
+  }
+
+  .show-dropdown {
+    display: block !important;
   }
 
   nav {
@@ -386,49 +398,22 @@ nav .dropdown-content a:hover {
     font-size: clamp(1rem, 4vw + 0.5rem, 1.2rem);
   }
 
+  .about-section,
   .residential-info {
     flex-direction: column;
     align-items: center;
   }
 
+  .about-text,
+  .about-image,
   .residential-text,
   .residential-image {
-    max-width: 100%;
+    width: 100%;
     text-align: center;
     padding: 1rem 0;
   }
 
-  .about-section {
-    flex-direction: column;
-    align-items: center;
+  .about-image img {
+    width: 100px;
   }
-
-  .about-text,
-  .about-image {
-    width: 100%;
-    padding: 1rem 0;
-  }
-  .about-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
-}
-
-.about-text {
-  width: 50%;
-  text-align: left;
-  padding-left: 2rem;
-}
-
-.about-image {
-  width: 50%;
-}
-
-.about-image img {
-  width: 150px;
-  height: auto;
-  border-radius: 8px;
-}
-
 }
