@@ -433,4 +433,13 @@ nav .dropdown-content a:hover {
   nav .dropdown-content a {
     border-top: 1px solid rgba(255,255,255,0.1);
   }
+
+  /* Show dropdown for mobile */
+.show-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative !important;
+  display: block !important;
+}
+
 }
