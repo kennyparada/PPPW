@@ -48,7 +48,7 @@ header {
   max-width: 100%;
 }
 
-/* Menu Toggle Button */
+/* 🌟 MENU TOGGLE BUTTON */
 .menu-toggle {
   background: none;
   border: none;
@@ -76,79 +76,49 @@ nav a {
   font-weight: bold;
 }
 
-/* Hero Section */
-.hero {
-  background: url('../Images/Pressure%20Washing%20Image.jpg') no-repeat center 70%;
-  background-size: cover;
-  color: white;
-  text-align: center;
-  padding: 5rem 2rem;
+nav .dropdown {
   position: relative;
+  display: inline-block;
 }
 
-.hero::after {
-  content: '';
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
-
-.hero h1 {
-  font-size: clamp(2rem, 5vw + 1rem, 3rem);
-}
-
-.hero p {
-  font-size: clamp(1rem, 3vw + 0.5rem, 1.5rem);
-}
-
-.quote-btn {
-  background-color: #ffcc00;
-  color: #003366;
-  padding: 1rem 2rem;
-  border: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.quote-btn:hover {
-  background-color: #e6b800;
-}
-
-/* Content Section */
-.content,
-.services {
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-.services ul {
-  list-style: none;
-  padding: 0;
-}
-
-.services li {
-  margin: 0.5rem 0;
-  font-weight: 500;
-}
-
-/* Footer */
-footer {
+nav .dropdown-content {
+  display: none;
+  flex-direction: column;
   background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 1rem;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  padding: 0;
+  position: relative;
+  margin-top: 0.5rem;
 }
 
-/* Responsive Fixes */
+nav .dropdown-content a {
+  padding: 0.75rem 1rem;
+  color: white;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: left;
+  width: 100%;
+}
+
+nav .dropdown-content a:hover {
+  background-color: #005299;
+}
+
+/* For desktop hover only */
+@media (min-width: 769px) {
+  nav .dropdown:hover .dropdown-content {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+
+/* Mobile Dropdown override */
+.show-dropdown {
+  display: flex !important;
+}
+
+/* 🔥 RESPONSIVE MOBILE FIXES */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -174,8 +144,13 @@ footer {
     margin-top: 1rem;
   }
 
-  .phone {
-    margin-top: 1rem;
-    text-align: center;
+  .dropdown-content {
+    position: relative !important;
+    box-shadow: none !important;
+  }
+
+  .dropdown-content a {
+    width: 100%;
+    padding: 0.75rem;
   }
 }
