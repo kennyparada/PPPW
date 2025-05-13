@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Potomac Pressure Washing</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="/PPPW/css/style.css">
 </head>
 <body>
+
   <header>
     <div class="logo">
       <a href="index.html">
-        <img src="Images/LogoTransparent.png" alt="Logo" class="logo-img">
+        <img src="Images/LogoTransparent.png" alt="Potomac Pressure Washing Logo" class="logo-img">
         Potomac Pressure Washing
       </a>
     </div>
@@ -58,8 +63,15 @@
     toggle.addEventListener('click', () => {
       menu.classList.toggle('show');
     });
+
+    const dropdownLink = document.querySelector('.dropdown > a');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    dropdownLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      dropdownContent.classList.toggle('show-dropdown');
+    });
   </script>
+
 </body>
 </html>
-
-<!-- Pages like residential.html, commercial.html, what-we-clean.html, contact.html, and pricing.html followed the same header/footer structure. Each used a hero/banner class and content inside <section> blocks with page-specific text. Let me know if you want full copies of each one now restored too. -->
