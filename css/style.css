@@ -48,6 +48,7 @@ header {
   max-width: 100%;
 }
 
+/* 🌟 MENU TOGGLE BUTTON */
 .menu-toggle {
   background: none;
   border: none;
@@ -81,44 +82,43 @@ nav .dropdown {
 }
 
 nav .dropdown-content {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #003366;
-  min-width: 150px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
   display: none;
   flex-direction: column;
-  z-index: 20;
+  background-color: #003366;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  padding: 0;
+  position: relative;
+  margin-top: 0.5rem;
 }
 
 nav .dropdown-content a {
-  color: white;
   padding: 0.75rem 1rem;
-  display: block;
+  color: white;
+  border-top: 1px solid rgba(255,255,255,0.1);
   text-align: left;
+  width: 100%;
 }
 
 nav .dropdown-content a:hover {
   background-color: #005299;
 }
 
+/* For desktop hover only */
 @media (min-width: 769px) {
   nav .dropdown:hover .dropdown-content {
     display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
   }
 }
 
-/* Mobile Dropdown Logic */
-nav .dropdown.show-dropdown .dropdown-content {
-  display: flex;
-  flex-direction: column;
-  background-color: #003366;
-  padding: 0.5rem 0;
-  width: 100%;
+/* Mobile Dropdown override */
+.show-dropdown {
+  display: flex !important;
 }
 
-/* RESPONSIVE */
+/* 🔥 RESPONSIVE MOBILE FIXES */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -144,28 +144,13 @@ nav .dropdown.show-dropdown .dropdown-content {
     margin-top: 1rem;
   }
 
-  .phone {
-    margin-top: 1rem;
-    text-align: center;
+  .dropdown-content {
+    position: relative !important;
+    box-shadow: none !important;
   }
 
-  nav .dropdown-content a {
-    border-top: 1px solid rgba(255,255,255,0.1);
+  .dropdown-content a {
+    width: 100%;
+    padding: 0.75rem;
   }
 }
-
-/* JavaScript (for HTML page) */
-<script>
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.menu');
-  const dropdown = document.querySelector('.dropdown');
-
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
-  });
-
-  dropdown.querySelector('a').addEventListener('click', function (e) {
-    e.preventDefault();
-    dropdown.classList.toggle('show-dropdown');
-  });
-</script>
