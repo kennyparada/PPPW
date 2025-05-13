@@ -408,4 +408,11 @@ nav .dropdown-content a:hover {
     width: 100%;
     padding: 1rem 0;
   }
+
+  .pricing-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+              url('../Images/Pressure Washing Image.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
 }
