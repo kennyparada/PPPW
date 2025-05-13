@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>About Us</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -17,9 +16,9 @@
       </a>
     </div>
     <nav>
-      <button class="menu-toggle">&#9776;</button>
+      <button class="menu-toggle">&#9776;</button> <!-- hamburger icon -->
       <div class="menu">
-        <a href="index.html">Home</a>
+         <a href="index.html">Home</a>
         <div class="dropdown">
           <a href="#">Services</a>
           <div class="dropdown-content">
@@ -37,15 +36,14 @@
   </header>
 
   <section class="about-section">
-    <div class="about-image">
-      <img src="Images/LogoTransparent.png" alt="Potomac Pressure Washing Logo">
-    </div>
     <div class="about-text">
       <h1>About Us</h1>
       <p>
-        Potomac Pressure Washing was started by two friends with a simple goal: to help homes and businesses shine.
-        What began as weekend projects turned into a passion for restoring beauty and pride to every neighborhood we serve.
+        Potomac Pressure Washing was started by two friends with a simple goal: to help homes and businesses shine. What began as weekend projects turned into a passion for restoring beauty and pride to every neighborhood we serve.
       </p>
+    </div>
+    <div class="about-image">
+      <img src="Images/AboutPhoto.jpg" alt="About Us Photo">
     </div>
   </section>
 
@@ -54,21 +52,14 @@
   </footer>
 
   <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
+  const dropdownLink = document.querySelector('.dropdown > a');
+  const dropdownContent = document.querySelector('.dropdown-content');
 
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
-    });
-
-    const dropdownLink = document.querySelector('.dropdown > a');
-    const dropdownContent = document.querySelector('.dropdown-content');
-
-    dropdownLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      dropdownContent.classList.toggle('show-dropdown');
-    });
-  </script>
+  dropdownLink.addEventListener('click', function (e) {
+    e.preventDefault(); // stop link navigation
+    dropdownContent.classList.toggle('show-dropdown');
+  });
+</script>
 
 </body>
 </html>
