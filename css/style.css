@@ -1,7 +1,7 @@
 /* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Reset basic styling */
+/* Base Styling */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -13,7 +13,7 @@ a {
   color: inherit;
 }
 
-/* Header Styling */
+/* Header */
 header {
   background-color: #003366;
   color: white;
@@ -38,17 +38,16 @@ header {
   display: flex;
   align-items: center;
   color: white;
-  text-decoration: none;
 }
 
 .logo-img {
-  height: auto;
   max-height: 45px;
   margin-right: 10px;
   max-width: 100%;
+  height: auto;
 }
 
-/* Menu Toggle Button (Mobile) */
+/* Hamburger */
 .menu-toggle {
   background: none;
   border: none;
@@ -76,40 +75,37 @@ nav a {
   font-weight: bold;
 }
 
-/* Dropdown Styling */
-nav .dropdown {
+/* Dropdown */
+.dropdown {
   position: relative;
-  display: inline-block;
 }
 
-nav .dropdown-content {
-  opacity: 0;
-  visibility: hidden;
+.dropdown-content {
+  display: none;
   position: absolute;
   background-color: #003366;
   min-width: 150px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 20;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  flex-direction: column;
 }
 
-nav .dropdown-content a {
+.dropdown-content a {
   color: white;
   padding: 0.75rem 1rem;
   display: block;
   text-align: left;
 }
 
-nav .dropdown:hover .dropdown-content {
-  opacity: 1;
-  visibility: visible;
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
-nav .dropdown-content a:hover {
+.dropdown-content a:hover {
   background-color: #005299;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
   background: url('../Images/Pressure%20Washing%20Image.jpg') no-repeat center 70%;
   background-size: cover;
@@ -146,10 +142,10 @@ nav .dropdown-content a:hover {
   background-color: #ffcc00;
   color: #003366;
   padding: 1rem 2rem;
-  border: none;
   font-weight: bold;
   border-radius: 5px;
   transition: background 0.3s ease;
+  border: none;
 }
 
 .quote-btn:hover {
@@ -195,7 +191,6 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 1rem;
 }
 
 .contact-form label {
@@ -234,100 +229,86 @@ footer {
 }
 
 .residential-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-              url('../Images/Commercial%20Building.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('../Images/Commercial%20Building.jpg') no-repeat center center/cover;
 }
 
 .commercial-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url('../Images/Brick.webp') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../Images/Brick.webp') no-repeat center center/cover;
 }
 
-/* About Page Section */
+/* About Section */
 .about-section {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding: 3rem 2rem;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 3rem 2rem;
+  gap: 2rem;
+}
+
+.about-text {
+  max-width: 500px;
 }
 
 .about-image img {
   width: 120px;
   height: auto;
-  margin-bottom: 1rem;
 }
 
-.about-text {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-/* Residential Info Section */
+/* Residential Info */
 .residential-info {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-  padding: 3rem 2rem;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  gap: 2rem;
 }
 
 .residential-text,
 .residential-image {
   flex: 1;
-  min-width: 280px;
-  padding: 1rem;
-  text-align: center;
-}
-
-.residential-text {
-  text-align: left;
+  min-width: 300px;
 }
 
 .residential-image img {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
-  display: block;
   object-fit: contain;
+}
+
+/* Buttons */
+.schedule-btn,
+.pricing-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .schedule-btn {
   background-color: #ffcc00;
   color: #003366;
-  padding: 1rem 2rem;
-  font-weight: bold;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
-  transition: background 0.3s ease;
 }
 
 .schedule-btn:hover {
   background-color: #e6b800;
 }
 
-/* Pricing Button */
 .pricing-btn {
   background-color: #ffc107;
   color: #000;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
-  transition: background-color 0.3s ease;
 }
 
 .pricing-btn:hover {
   background-color: #e0a800;
 }
 
-/* 🔥 Responsive Mobile Fixes */
+/* ✅ Mobile Fixes */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -338,8 +319,8 @@ footer {
     flex-direction: column;
     width: 100%;
     background-color: #003366;
-    text-align: center;
     padding: 1rem 0;
+    text-align: center;
   }
 
   .menu.show {
@@ -348,19 +329,19 @@ footer {
 
   .dropdown-content {
     display: none;
+    flex-direction: column;
     background-color: #003366;
-    padding-left: 1rem;
+    padding-left: 0;
   }
 
-  .show-dropdown {
-    display: block !important;
+  .dropdown .show-dropdown {
+    display: flex !important;
   }
 
   nav {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 1rem;
   }
 
   .phone {
@@ -369,14 +350,8 @@ footer {
   }
 
   .hero {
-    background-position: center;
     padding: 3rem 1rem;
-  }
-
-  .about-section,
-  .residential-info {
-    flex-direction: column;
-    align-items: center;
+    background-position: center;
   }
 
   .about-text,
@@ -384,8 +359,8 @@ footer {
   .residential-text,
   .residential-image {
     width: 100%;
-    text-align: center;
     padding: 1rem 0;
+    text-align: center;
   }
 
   .about-image img {
