@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
@@ -35,7 +36,6 @@
     <div class="phone">Call: <a href="tel:9195926347">919-592-6347</a></div>
   </header>
 
-  <!-- ✅ Updated About Section -->
   <section class="about-section">
     <div class="about-image">
       <img src="Images/LogoTransparent.png" alt="Potomac Pressure Washing Logo">
@@ -54,6 +54,13 @@
   </footer>
 
   <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
     const dropdownLink = document.querySelector('.dropdown > a');
     const dropdownContent = document.querySelector('.dropdown-content');
 
