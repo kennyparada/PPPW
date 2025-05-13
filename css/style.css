@@ -249,12 +249,23 @@ nav .dropdown-content a {
   text-align: left;
 }
 
-nav .dropdown:hover .dropdown-content {
-  display: flex;
-}
-
 nav .dropdown-content a:hover {
   background-color: #005299;
+}
+
+@media (min-width: 769px) {
+  nav .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+}
+
+/* Mobile Dropdown override */
+.show-dropdown {
+  display: flex !important;
+  flex-direction: column !important;
+  position: relative !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* About / Residential Sections */
@@ -419,29 +430,7 @@ nav .dropdown-content a:hover {
     padding: 1rem 0;
   }
 
-  nav .dropdown .dropdown-content {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    display: none;
-  }
-
-  nav .dropdown-content.show-dropdown {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
   nav .dropdown-content a {
     border-top: 1px solid rgba(255,255,255,0.1);
   }
-
-  /* Show dropdown for mobile */
-.show-dropdown {
-  opacity: 1 !important;
-  visibility: visible !important;
-  position: relative !important;
-  display: block !important;
-}
-
 }
