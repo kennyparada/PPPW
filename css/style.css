@@ -330,7 +330,7 @@ nav .dropdown-content a:hover {
 }
 
 .about-image img {
-  width: 50%;
+  width: 300px; /* 👈 This controls how small it looks */
   height: auto;
   border-radius: 8px;
 }
