@@ -191,12 +191,6 @@ footer {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact-page p a {
-  color: #003366;
-  font-weight: bold;
-  text-decoration: none;
-}
-
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -248,23 +242,15 @@ footer {
   text-align: center;
 }
 
-/* About / Residential Sections */
+/* About Page Section */
 .about-section {
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.about-text,
-.about-image {
-  width: 100%;
-  padding: 1rem 0;
-}
-
-.about-image {
-  display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .about-image img {
@@ -273,6 +259,12 @@ footer {
   margin-bottom: 1rem;
 }
 
+.about-text {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Residential Info Section */
 .residential-info {
   display: flex;
   justify-content: space-between;
@@ -319,12 +311,6 @@ footer {
 
 .schedule-btn:hover {
   background-color: #e6b800;
-}
-
-.left-half {
-  width: 50%;
-  text-align: left;
-  padding: 2rem;
 }
 
 /* Pricing Button */
