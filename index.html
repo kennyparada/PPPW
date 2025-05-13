@@ -4,15 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Potomac Pressure Washing</title>
-
-  <!-- Load Poppins font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Load your CSS -->
   <link rel="stylesheet" href="/PPPW/css/style.css">
 </head>
 <body>
-
   <header>
     <div class="logo">
       <a href="index.html">
@@ -20,13 +15,10 @@
         Potomac Pressure Washing
       </a>
     </div>
-    
     <nav>
-      <button class="menu-toggle">&#9776;</button> <!-- hamburger icon -->
+      <button class="menu-toggle">&#9776;</button>
       <div class="menu">
         <a href="index.html">Home</a>
-        
-        <!-- Dropdown fixed -->
         <div class="dropdown">
           <a href="#">Services</a>
           <div class="dropdown-content">
@@ -35,13 +27,11 @@
             <a href="what-we-clean.html">What We Clean</a>
           </div>
         </div>
-        
         <a href="pricing.html">Pricing</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
     </nav>
-
     <div class="phone">Call: <a href="tel:9195926347">919-592-6347</a></div>
   </header>
 
@@ -62,26 +52,14 @@
     <p>&copy; 2025 Potomac Pressure Washing. All rights reserved.</p>
   </footer>
 
-  <!-- ✅ Add JS for hamburger toggle -->
-<script>
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.menu');
-
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
-  });
-
-  const dropdownLink = document.querySelector('.dropdown > a');
-  const dropdownContent = document.querySelector('.dropdown-content');
-
-  dropdownLink.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    // For mobile: toggle on click
-    dropdownContent.classList.toggle('show-dropdown');
-  });
-</script>
-
-
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
+
+<!-- Pages like residential.html, commercial.html, what-we-clean.html, contact.html, and pricing.html followed the same header/footer structure. Each used a hero/banner class and content inside <section> blocks with page-specific text. Let me know if you want full copies of each one now restored too. -->
