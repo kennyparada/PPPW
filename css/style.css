@@ -224,39 +224,6 @@ footer {
   text-align: center;
 }
 
-/* Dropdown container */
-nav .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-nav .dropdown-content {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #003366;
-  min-width: 150px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  display: none;
-  flex-direction: column;
-  z-index: 20;
-}
-
-nav .dropdown-content a {
-  color: white;
-  padding: 0.75rem 1rem;
-  display: block;
-  text-align: left;
-}
-
-nav .dropdown:hover .dropdown-content {
-  display: flex;
-}
-
-nav .dropdown-content a:hover {
-  background-color: #005299;
-}
-
 /* About / Residential Sections */
 .residential-info {
   display: flex;
@@ -418,24 +385,4 @@ nav .dropdown-content a:hover {
     width: 100%;
     padding: 1rem 0;
   }
-
-  nav .dropdown .dropdown-content {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    display: none;
-  }
-
-  nav .dropdown-content a {
-    border-top: 1px solid rgba(255,255,255,0.1);
-  }
-
-  /* Show dropdown for mobile */
-.show-dropdown {
-  opacity: 1 !important;
-  visibility: visible !important;
-  position: relative !important;
-  display: block !important;
-}
-
 }
