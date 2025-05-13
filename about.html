@@ -1,30 +1,73 @@
-.menu-toggle {
-  display: none;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="Images/LogoTransparent.png" alt="Logo" class="logo-img">
+        Potomac Pressure Washing
+      </a>
+    </div>
+    <nav>
+      <button class="menu-toggle">&#9776;</button>
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <a href="#">Services</a>
+          <div class="dropdown-content">
+            <a href="residential.html">Residential</a>
+            <a href="commercial.html">Commercial</a>
+            <a href="what-we-clean.html">What We Clean</a>
+          </div>
+        </div>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+    <div class="phone">Call: <a href="tel:9195926347">919-592-6347</a></div>
+  </header>
 
-  .menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #003366;
-    text-align: center;
-    padding: 1rem 0;
-  }
+  <section class="about-section">
+    <div class="about-image">
+      <img src="Images/LogoTransparent.png" alt="Potomac Pressure Washing Logo">
+    </div>
+    <div class="about-text">
+      <h1>About Us</h1>
+      <p>
+        Potomac Pressure Washing was started by two friends with a simple goal: to help homes and businesses shine.
+        What began as weekend projects turned into a passion for restoring beauty and pride to every neighborhood we serve.
+      </p>
+    </div>
+  </section>
 
-  .menu.show {
-    display: flex;
-  }
+  <footer>
+    <p>&copy; 2025 Potomac Pressure Washing. All rights reserved.</p>
+  </footer>
 
-  .dropdown-content {
-    display: none;
-  }
+  <!-- ✅ Working hamburger + dropdown -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+    const dropdownLink = document.querySelector('.dropdown > a');
+    const dropdownContent = document.querySelector('.dropdown-content');
 
-  .show-dropdown {
-    display: block !important;
-  }
-}
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+    dropdownLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      dropdownContent.classList.toggle('show-dropdown');
+    });
+  </script>
+
+</body>
+</html>
