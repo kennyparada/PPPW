@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Potomac Pressure Washing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Load Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Load your CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header>
     <div class="logo">
       <a href="index.html">
-        <img src="Images/LogoTransparent.png" alt="Logo" class="logo-img" />
+        <img src="Images/LogoTransparent.png" alt="Logo" class="logo-img">
         Potomac Pressure Washing
       </a>
     </div>
-
-    <!-- Hamburger Menu -->
-    <button class="menu-toggle">&#9776;</button>
-
-    <!-- Mobile Side Menu -->
-    <nav class="side-menu" id="mainMenu">
-      <button class="close-btn" onclick="closeMenu()">×</button>
-      <a href="index.html">Home</a>
-      <button onclick="openSubMenu()">Services ▶</button>
-      <a href="pricing.html">Pricing</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <!-- Submenu -->
-    <nav class="side-menu sub-menu" id="subMenu">
-      <button class="back-btn" onclick="closeSubMenu()">◀ Back</button>
-      <a href="residential.html">Residential</a>
-      <a href="commercial.html">Commercial</a>
-      <a href="what-we-clean.html">What We Clean</a>
+    
+    <nav>
+      <button class="menu-toggle">&#9776;</button> <!-- hamburger icon -->
+      <div class="menu">
+        <a href="index.html">Home</a>
+        
+        <!-- Dropdown fixed -->
+        <div class="dropdown">
+          <a href="#">Services</a>
+          <div class="dropdown-content">
+            <a href="residential.html">Residential</a>
+            <a href="commercial.html">Commercial</a>
+            <a href="what-we-clean.html">What We Clean</a>
+          </div>
+        </div>
+        
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </nav>
 
     <div class="phone">Text or Call: <a href="tel:9195926347">919-592-6347</a></div>
@@ -58,31 +62,15 @@
     <p>&copy; 2025 Potomac Pressure Washing. All rights reserved.</p>
   </footer>
 
-  <!-- JS -->
+  <!-- ✅ Add JS for hamburger toggle -->
   <script>
     const toggle = document.querySelector('.menu-toggle');
-    const mainMenu = document.getElementById('mainMenu');
-    const subMenu = document.getElementById('subMenu');
+    const menu = document.querySelector('.menu');
 
-    function openMenu() {
-      mainMenu.classList.add('show');
-    }
-
-    function closeMenu() {
-      mainMenu.classList.remove('show');
-    }
-
-    function openSubMenu() {
-      mainMenu.classList.remove('show');
-      subMenu.classList.add('show');
-    }
-
-    function closeSubMenu() {
-      subMenu.classList.remove('show');
-      mainMenu.classList.add('show');
-    }
-
-    toggle.addEventListener('click', openMenu);
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
   </script>
+
 </body>
 </html>
