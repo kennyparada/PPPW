@@ -85,7 +85,10 @@ nav a {
 }
 
 .dropdown-content {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 100%;
   left: 0;
@@ -94,6 +97,7 @@ nav a {
   padding: 0.5rem 0;
   border-radius: 5px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   z-index: 20;
 }
 
@@ -102,17 +106,24 @@ nav a {
   color: white;
   padding: 0.75rem 1rem;
   transition: background 0.2s ease;
-}
-
-@media (min-width: 769px) {
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+  border-radius: 4px;
 }
 
 .dropdown-content a:hover {
   background-color: #005299;
-  border-radius: 4px;
+}
+
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* ✅ JavaScript-based mobile dropdown toggle */
+.dropdown .show-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* Hero */
@@ -177,7 +188,7 @@ footer {
   text-align: center;
 }
 
-/* Responsive Fixes */
+/* ✅ Responsive Fixes */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -201,6 +212,8 @@ footer {
     box-shadow: none;
     padding: 0;
     background-color: transparent;
+    opacity: 1;
+    visibility: visible;
   }
 
   .dropdown-content a {
@@ -209,11 +222,6 @@ footer {
   }
 
   .dropdown:hover .dropdown-content {
-    display: none; /* disable hover on mobile */
-  }
-
-  .dropdown .show-dropdown {
-    display: flex !important;
-    flex-direction: column;
+    display: none;
   }
 }
