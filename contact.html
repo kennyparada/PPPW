@@ -68,16 +68,12 @@
   </footer>
 
   <!-- ✅ Add JavaScript to pre-fill message -->
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const params = new URLSearchParams(window.location.search);
-      const messageParam = params.get('message');
-      if (messageParam) {
-        const textarea = document.getElementById('message');
-        if (textarea) {
-          textarea.value = decodeURIComponent(messageParam);
-        }
-      }
+ <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
     });
   </script>
 
