@@ -1,7 +1,5 @@
-/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Base Styling */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -31,7 +29,6 @@ header {
   align-items: center;
   font-weight: bold;
   font-size: 1.5rem;
-  color: white;
 }
 
 .logo a {
@@ -43,8 +40,6 @@ header {
 .logo-img {
   max-height: 45px;
   margin-right: 10px;
-  max-width: 100%;
-  height: auto;
 }
 
 /* Hamburger */
@@ -57,10 +52,9 @@ header {
   display: none;
 }
 
-/* Navigation */
+/* Desktop Nav (hidden in mobile) */
 .menu {
   display: flex;
-  align-items: center;
   gap: 1.5rem;
 }
 
@@ -74,59 +68,7 @@ nav a {
   font-weight: bold;
 }
 
-/* Dropdown */
-.dropdown {
-  position: relative;
-}
-
-.dropdown > a::after {
-  content: ' ▼';
-  font-size: 0.7rem;
-}
-
-.dropdown-content {
-  opacity: 0;
-  visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #003366;
-  min-width: 180px;
-  padding: 0.5rem 0;
-  border-radius: 5px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 20;
-}
-
-.dropdown-content a {
-  display: block;
-  color: white;
-  padding: 0.75rem 1rem;
-  transition: background 0.2s ease;
-  border-radius: 4px;
-}
-
-.dropdown-content a:hover {
-  background-color: #005299;
-}
-
-@media (min-width: 769px) {
-  .dropdown:hover .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-/* ✅ JavaScript-based mobile dropdown toggle */
-.dropdown .show-dropdown {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* Hero */
+/* Hero Section */
 .hero {
   background: url('../Images/Pressure%20Washing%20Image.jpg') no-repeat center 70%;
   background-size: cover;
@@ -181,47 +123,52 @@ footer {
   padding: 1rem;
 }
 
-/* General Content */
-.content,
-.services {
+/* Content */
+.content {
   padding: 3rem 2rem;
   text-align: center;
 }
 
-/* ✅ Responsive Fixes */
-@media (max-width: 768px) {
+/* Mobile Side Menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 75%;
+  max-width: 300px;
+  height: 100%;
+  background-color: #003366;
+  color: white;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.side-menu.show {
+  left: 0;
+}
+
+.side-menu a,
+.side-menu button {
+  color: white;
+  background: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+/* Hide Side Menus on Desktop */
+@media (min-width: 769px) {
+  .side-menu {
+    display: none !important;
+  }
+
   .menu-toggle {
-    display: block;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #003366;
-    text-align: center;
-    padding: 1rem 0;
-  }
-
-  .menu.show {
-    display: flex;
-  }
-
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-    padding: 0;
-    background-color: transparent;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .dropdown-content a {
-    padding: 0.75rem 1rem;
-    background-color: #003366;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: none;
+    display: none !important;
   }
 }
