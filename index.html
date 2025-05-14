@@ -64,27 +64,24 @@
   </footer>
 
   <!-- Mobile Menu Script -->
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const mainMenu = document.getElementById('mainMenu');
-    const subMenu = document.getElementById('subMenu');
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  const dropdownToggle = document.querySelector('.dropdown > a');
+  const dropdownContent = document.querySelector('.dropdown .dropdown-content');
 
-    toggle.addEventListener('click', () => {
-      mainMenu.classList.add('show');
-    });
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
 
-    function closeMenu() {
-      mainMenu.classList.remove('show');
+  dropdownToggle.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      dropdownContent.classList.toggle('show-dropdown');
     }
+  });
+</script>
 
-    function openSubMenu() {
-      subMenu.classList.add('show');
-    }
-
-    function closeSubMenu() {
-      subMenu.classList.remove('show');
-    }
-  </script>
 
 </body>
 </html>
