@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* Base Styling */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -29,6 +30,7 @@ header {
   align-items: center;
   font-weight: bold;
   font-size: 1.5rem;
+  color: white;
 }
 
 .logo a {
@@ -52,23 +54,13 @@ header {
   display: none;
 }
 
-/* Desktop Nav (hidden in mobile) */
-.menu {
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav a {
-  color: white;
-  font-weight: 500;
-}
-
+/* Phone CTA */
 .phone a {
   color: white;
   font-weight: bold;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
   background: url('../Images/Pressure%20Washing%20Image.jpg') no-repeat center 70%;
   background-size: cover;
@@ -107,12 +99,18 @@ nav a {
   padding: 1rem 2rem;
   font-weight: bold;
   border-radius: 5px;
-  transition: background 0.3s ease;
   border: none;
+  transition: background 0.3s ease;
 }
 
 .quote-btn:hover {
   background-color: #e6b800;
+}
+
+/* Content */
+.content {
+  padding: 3rem 2rem;
+  text-align: center;
 }
 
 /* Footer */
@@ -123,13 +121,7 @@ footer {
   padding: 1rem;
 }
 
-/* Content */
-.content {
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-/* Mobile Side Menu */
+/* Side Menu (Mobile) */
 .side-menu {
   position: fixed;
   top: 0;
@@ -162,12 +154,21 @@ footer {
   cursor: pointer;
 }
 
-/* Hide Side Menus on Desktop */
+.close-btn,
+.back-btn {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Desktop hides mobile nav */
 @media (min-width: 769px) {
   .side-menu {
     display: none !important;
   }
-
   .menu-toggle {
     display: none !important;
   }
