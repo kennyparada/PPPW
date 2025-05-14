@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pricing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potomac Pressure Washing</title>
 
-  <!-- Add Poppins font -->
+  <!-- Google Font -->
+  <!-- Load Poppins font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- CSS file -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Stylesheet -->
+  <!-- Load your CSS -->
+  <link rel="stylesheet" href="/PPPW/css/style.css">
 </head>
 <body>
 
@@ -20,46 +18,47 @@
         Potomac Pressure Washing
       </a>
     </div>
+
+    
     <nav>
+      <button class="menu-toggle">&#9776;</button>
       <button class="menu-toggle">&#9776;</button> <!-- hamburger icon -->
       <div class="menu">
         <a href="index.html">Home</a>
-          <div class="dropdown">
-            <a href="#">Services</a>
-            <div class="dropdown-content">
-              <a href="residential.html">Residential</a>
-              <a href="commercial.html">Commercial</a>
-              <a href="what-we-clean.html">What We Clean</a>
-            </div>
+
+        
+        <!-- Dropdown fixed -->
+        <div class="dropdown">
+          <a href="#">Services</a>
+          <div class="dropdown-content">
+@@ -33,7 +35,7 @@
+            <a href="what-we-clean.html">What We Clean</a>
           </div>
+        </div>
+
+        
         <a href="pricing.html">Pricing</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-    
-    <div class="phone">Call: <a href="tel:9195926347">919-592-6347</a></div>
-  </header>
-
-<section class="pricing-bg">
-  <h1>Our Pricing</h1>
-  <p>Starting at $150 per job. Prices vary based on home size, surface area, and cleaning type. Contact us for a free estimate.</p>
-
-  <a href="contact.html?message=Hi%2C%20I%27m%20interested%20in%20getting%20a%20pricing%20estimate.%20Can%20you%20tell%20me%20more%3F" class="pricing-btn">
-    Ask About Pricing
-  </a>
-</section>
-
-
-  <footer>
+@@ -60,20 +62,15 @@ <h2>Why Choose Us?</h2>
     <p>&copy; 2025 Potomac Pressure Washing. All rights reserved.</p>
   </footer>
- <script>
+
+  <!-- ✅ Add JS for hamburger toggle -->
+  <script>
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
 
     toggle.addEventListener('click', () => {
       menu.classList.toggle('show');
+    });
+
+    const dropdownLink = document.querySelector('.dropdown > a');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    dropdownLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      dropdownContent.classList.toggle('show-dropdown');
     });
   </script>
 
