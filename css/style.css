@@ -104,8 +104,10 @@ nav a {
   transition: background 0.2s ease;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 }
 
 .dropdown-content a:hover {
