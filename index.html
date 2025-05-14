@@ -66,21 +66,30 @@
   <!-- Mobile Menu Script -->
 <script>
   const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.menu');
-  const dropdownToggle = document.querySelector('.dropdown > a');
-  const dropdownContent = document.querySelector('.dropdown .dropdown-content');
+  const mainMenu = document.getElementById('mainMenu');
+  const subMenu = document.getElementById('subMenu');
 
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
-  });
+  function openMenu() {
+    mainMenu.classList.add('show');
+  }
 
-  dropdownToggle.addEventListener('click', function(e) {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      dropdownContent.classList.toggle('show-dropdown');
-    }
-  });
+  function closeMenu() {
+    mainMenu.classList.remove('show');
+  }
+
+  function openSubMenu() {
+    mainMenu.classList.remove('show');
+    subMenu.classList.add('show');
+  }
+
+  function closeSubMenu() {
+    subMenu.classList.remove('show');
+    mainMenu.classList.add('show');
+  }
+
+  toggle.addEventListener('click', openMenu);
 </script>
+
 
 
 </body>
