@@ -57,15 +57,14 @@ header {
   display: none;
 }
 
+/* Navigation */
 .menu {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 nav a {
-  margin: 0 1rem;
   color: white;
   font-weight: 500;
 }
@@ -80,21 +79,29 @@ nav a {
   position: relative;
 }
 
+.dropdown > a::after {
+  content: ' ▼';
+  font-size: 0.7rem;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 100%;
+  left: 0;
   background-color: #003366;
-  min-width: 150px;
+  min-width: 180px;
+  padding: 0.5rem 0;
+  border-radius: 5px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 20;
-  flex-direction: column;
 }
 
 .dropdown-content a {
+  display: block;
   color: white;
   padding: 0.75rem 1rem;
-  display: block;
-  text-align: left;
+  transition: background 0.2s ease;
 }
 
 .dropdown:hover .dropdown-content {
@@ -103,6 +110,7 @@ nav a {
 
 .dropdown-content a:hover {
   background-color: #005299;
+  border-radius: 4px;
 }
 
 /* Hero */
@@ -167,148 +175,7 @@ footer {
   text-align: center;
 }
 
-.services ul {
-  list-style: none;
-  padding: 0;
-}
-
-.services li {
-  margin: 0.5rem 0;
-  font-weight: 500;
-}
-
-/* Contact Page */
-.contact-page {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-form label {
-  font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.contact-form button {
-  background-color: #003366;
-  color: white;
-  padding: 0.75rem;
-  border: none;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.contact-form button:hover {
-  background-color: #005299;
-}
-
-/* Page Backgrounds */
-.residential-bg,
-.commercial-bg {
-  color: white;
-  padding: 6rem 2rem;
-  text-align: center;
-}
-
-.residential-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('../Images/Commercial%20Building.jpg') no-repeat center center/cover;
-}
-
-.commercial-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('../Images/Brick.webp') no-repeat center center/cover;
-}
-
-/* About Section */
-.about-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 3rem 2rem;
-  gap: 2rem;
-}
-
-.about-text {
-  max-width: 500px;
-}
-
-.about-image img {
-  width: 120px;
-  height: auto;
-}
-
-/* Residential Info */
-.residential-info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 3rem 2rem;
-  gap: 2rem;
-}
-
-.residential-text,
-.residential-image {
-  flex: 1;
-  min-width: 300px;
-}
-
-.residential-image img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-/* Buttons */
-.schedule-btn,
-.pricing-btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.schedule-btn {
-  background-color: #ffcc00;
-  color: #003366;
-}
-
-.schedule-btn:hover {
-  background-color: #e6b800;
-}
-
-.pricing-btn {
-  background-color: #ffc107;
-  color: #000;
-}
-
-.pricing-btn:hover {
-  background-color: #e0a800;
-}
-
-/* ✅ Mobile Fixes */
+/* Responsive Fixes */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -319,8 +186,8 @@ footer {
     flex-direction: column;
     width: 100%;
     background-color: #003366;
-    padding: 1rem 0;
     text-align: center;
+    padding: 1rem 0;
   }
 
   .menu.show {
@@ -328,95 +195,23 @@ footer {
   }
 
   .dropdown-content {
-    display: none;
-    flex-direction: column;
+    position: static;
+    box-shadow: none;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .dropdown-content a {
+    padding: 0.75rem 1rem;
     background-color: #003366;
-    padding-left: 0;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none; /* disable hover on mobile */
   }
 
   .dropdown .show-dropdown {
     display: flex !important;
-  }
-
-  nav {
     flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
   }
-
-  .phone {
-    margin-top: 1rem;
-    text-align: center;
-  }
-
-  .hero {
-    padding: 3rem 1rem;
-    background-position: center;
-  }
-
-  .about-text,
-  .about-image,
-  .residential-text,
-  .residential-image {
-    width: 100%;
-    padding: 1rem 0;
-    text-align: center;
-  }
-
-  .about-image img {
-    width: 100px;
-  }
-
-  .side-menu {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 75%;
-  max-width: 280px;
-  height: 100%;
-  background-color: #003366;
-  color: white;
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  transition: left 0.3s ease;
-  z-index: 1000;
-}
-
-.side-menu a,
-.side-menu button {
-  color: white;
-  text-align: left;
-  padding: 1rem 0;
-  font-size: 1.2rem;
-  background: none;
-  border: none;
-  font-family: 'Poppins', sans-serif;
-  cursor: pointer;
-}
-
-.side-menu.show {
-  left: 0;
-}
-
-.sub-menu {
-  left: 100%;
-  position: absolute;
-  top: 0;
-}
-
-.sub-menu.show {
-  left: 0;
-}
-
-.close-btn,
-.back-btn {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  align-self: flex-start;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
 }
