@@ -374,4 +374,55 @@ footer {
   .about-image img {
     width: 100px;
   }
+
+  .side-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  background-color: #003366;
+  color: white;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.side-menu a, .side-menu button {
+  color: white;
+  text-align: left;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  border: none;
+  background: none;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+.side-menu.show {
+  left: 0;
+}
+
+.sub-menu {
+  left: 100%;
+}
+
+.sub-menu.show {
+  left: 0;
+}
+
+.close-btn,
+.back-btn {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
 }
