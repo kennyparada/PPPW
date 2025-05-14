@@ -308,6 +308,14 @@ footer {
   background-color: #e0a800;
 }
 
+.pricing-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('../Images/Pressure%20Washing%20Image.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
 /* ✅ Mobile Fixes */
 @media (max-width: 768px) {
   .menu-toggle {
