@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Potomac Pressure Washing</title>
 
-  <!-- Load Poppins font -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Link to CSS -->
+  <!-- Your CSS File -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -24,7 +24,7 @@
     <!-- Mobile Hamburger Button -->
     <button class="menu-toggle">&#9776;</button>
 
-    <!-- Main Side Menu -->
+    <!-- Main Mobile Menu -->
     <nav class="side-menu" id="mainMenu">
       <button class="close-btn" onclick="closeMenu()">×</button>
       <a href="index.html">Home</a>
@@ -42,7 +42,7 @@
       <a href="what-we-clean.html">What We Clean</a>
     </nav>
 
-    <!-- Phone CTA -->
+    <!-- Desktop Phone CTA -->
     <div class="phone">Text or Call: <a href="tel:9195926347">919-592-6347</a></div>
   </header>
 
@@ -63,34 +63,32 @@
     <p>&copy; 2025 Potomac Pressure Washing. All rights reserved.</p>
   </footer>
 
-  <!-- Mobile Menu Script -->
-<script>
-  const toggle = document.querySelector('.menu-toggle');
-  const mainMenu = document.getElementById('mainMenu');
-  const subMenu = document.getElementById('subMenu');
+  <!-- Mobile Navigation Script -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const mainMenu = document.getElementById('mainMenu');
+    const subMenu = document.getElementById('subMenu');
 
-  function openMenu() {
-    mainMenu.classList.add('show');
-  }
+    function openMenu() {
+      mainMenu.classList.add('show');
+    }
 
-  function closeMenu() {
-    mainMenu.classList.remove('show');
-  }
+    function closeMenu() {
+      mainMenu.classList.remove('show');
+    }
 
-  function openSubMenu() {
-    mainMenu.classList.remove('show');
-    subMenu.classList.add('show');
-  }
+    function openSubMenu() {
+      mainMenu.classList.remove('show');
+      subMenu.classList.add('show');
+    }
 
-  function closeSubMenu() {
-    subMenu.classList.remove('show');
-    mainMenu.classList.add('show');
-  }
+    function closeSubMenu() {
+      subMenu.classList.remove('show');
+      mainMenu.classList.add('show');
+    }
 
-  toggle.addEventListener('click', openMenu);
-</script>
-
-
+    toggle.addEventListener('click', openMenu);
+  </script>
 
 </body>
 </html>
