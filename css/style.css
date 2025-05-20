@@ -198,11 +198,11 @@ footer {
 }
 
 .contact-form input,
-.contact-form textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+.contact-form textarea,
+.contact-form button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-form button {
