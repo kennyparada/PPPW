@@ -6,10 +6,10 @@
   <title>Contact Us | Potomac Valet Trash</title>
   <link rel="icon" type="image/png" href="Images/LogoTransparent.png" />
 
-  <!-- Load Poppins font from Google Fonts -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Your CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -17,13 +17,13 @@
   <header>
     <div class="logo">
       <a href="index.html">
-        <img src="Images/LogoTransparent.png" alt="Logo" class="logo-img">
+        <img src="Images/LogoTransparent.png" alt="Potomac Valet Trash Logo" class="logo-img">
         Potomac Valet Trash
       </a>
     </div>
 
     <nav>
-      <button class="menu-toggle">&#9776;</button>
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
       <div class="menu">
         <a href="index.html">Home</a>
 
@@ -44,53 +44,62 @@
     <div class="phone">Text or Call: <a href="tel:7035689373">703-568-9373</a></div>
   </header>
 
-  <section class="content contact-page">
-    <h1>Contact Us</h1>
-    <p><strong>Email:</strong> <a href="mailto:Info@PotomacValetTrash.com">Info@PotomacValetTrash.com</a></p>
-    <p><strong>Phone:</strong> <a href="tel:7035689373">703-568-9373</a></p>
-    <p>
-      Use the form below to request a quote. If you’re a property manager, include the property name and number of units/buildings for faster pricing.
-    </p>
+  <main>
+    <section class="content contact-page">
+      <h1>Contact Us</h1>
+      <p><strong>Email:</strong> <a href="mailto:Info@PotomacValetTrash.com">Info@PotomacValetTrash.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:7035689373">703-568-9373</a></p>
 
-    <form action="https://formspree.io/f/mzzrwady" method="POST" class="contact-form">
-      <label for="name">Your name</label>
-      <input type="text" id="name" name="name" required />
+      <p>
+        Use the form below to request a quote. If you’re a property manager, include the property name and number of units/buildings for faster pricing.
+      </p>
 
-      <label for="email">Your email</label>
-      <input type="email" id="email" name="email" required />
+      <form action="https://formspree.io/f/mzzrwady" method="POST" class="contact-form">
+        <!-- Helpful for Formspree email filtering -->
+        <input type="hidden" name="_subject" value="New Quote Request — Potomac Valet Trash" />
 
-      <label for="phone">Your number</label>
-      <input type="tel" id="phone" name="phone" required />
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required />
 
-      <label for="property">Property name (optional)</label>
-      <input type="text" id="property" name="property" />
+        <label for="email">Your email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required />
 
-      <label for="units">Approx. number of units (optional)</label>
-      <input type="text" id="units" name="units" />
+        <label for="phone">Your number</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" required />
 
-      <label for="message">Your message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="property">Property name (optional)</label>
+        <input type="text" id="property" name="property" />
 
-      <button type="submit">Request a Quote</button>
-    </form>
-  </section>
+        <label for="units">Approx. number of units (optional)</label>
+        <input type="number" id="units" name="units" min="0" step="1" />
+
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Request a Quote</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2026 Potomac Valet Trash. All rights reserved.</p>
   </footer>
 
   <script>
+    // Mobile menu toggle
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
 
     toggle.addEventListener('click', () => {
       menu.classList.toggle('show');
     });
-  </script>
 
-  <script>
-    if (location.protocol !== 'https:') {
-      location.replace(`https:${location.href.substring(location.protocol.length)}`);
+    // ✅ Prefill message from URL: contact.html?message=...
+    const params = new URLSearchParams(window.location.search);
+    const prefill = params.get('message');
+    if (prefill) {
+      const textarea = document.getElementById('message');
+      textarea.value = decodeURIComponent(prefill);
     }
   </script>
 
