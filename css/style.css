@@ -27,15 +27,14 @@ body {
   background: var(--bg);
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+a { text-decoration: none; color: inherit; }
 
-/* Header */
-header {
+/* =========================
+   Header
+========================= */
+header{
   background-color: var(--green);
-  color: white;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,18 +42,25 @@ header {
   flex-wrap: wrap;
   position: relative;
   z-index: 10;
+  gap: 1rem;
 }
 
+/* 3-column layout on desktop */
+header .logo{ flex: 1; }
+header nav{ flex: 1; display: flex; justify-content: center; }
+header .phone{ flex: 1; display: flex; justify-content: flex-end; }
+
 .logo,
-.logo a {
+.logo a{
   display: flex;
   align-items: center;
   font-weight: 800;
   font-size: 1.25rem;
-  color: white;
+  color: #fff;
+  white-space: nowrap;
 }
 
-.logo-img {
+.logo-img{
   max-height: 45px;
   margin-right: 10px;
   max-width: 100%;
@@ -62,16 +68,17 @@ header {
 }
 
 /* Hamburger */
-.menu-toggle {
+.menu-toggle{
   background: none;
   border: none;
-  color: white;
+  color: #fff;
   font-size: 2rem;
   cursor: pointer;
   display: none; /* shown on mobile */
 }
 
-.menu {
+/* Nav links */
+.menu{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -80,19 +87,27 @@ header {
 }
 
 nav a,
-.phone a {
-  color: white;
+.phone a{
+  color: #fff;
   font-weight: 600;
 }
 
-/* Dropdown */
-.dropdown {
-  position: relative;
+nav a:focus-visible,
+.phone a:focus-visible,
+.menu-toggle:focus-visible{
+  outline: 3px solid rgba(255,255,255,0.55);
+  outline-offset: 3px;
+  border-radius: 10px;
 }
 
-.dropdown-content {
+/* Dropdown */
+.dropdown{ position: relative; }
+
+.dropdown-content{
   display: none;
   position: absolute;
+  top: 100%;
+  left: 0;
   background-color: var(--green);
   min-width: 180px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
@@ -102,22 +117,20 @@ nav a,
   overflow: hidden;
 }
 
-.dropdown-content a {
-  color: white;
+.dropdown-content a{
+  color: #fff;
   padding: 0.75rem 1rem;
   display: block;
   text-align: left;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+.dropdown:hover .dropdown-content{ display: block; }
+.dropdown-content a:hover{ background-color: var(--green-hover); }
 
-.dropdown-content a:hover {
-  background-color: var(--green-hover);
-}
-
-/* ===== Nicer Hero (use in HTML: class="hero hero--clean") ===== */
+/* =========================
+   Nicer Hero
+   Use: <section class="hero hero--clean"><div class="hero-inner">...</div></section>
+========================= */
 .hero--clean{
   padding: 3.5rem 1.5rem;
   background:
@@ -191,10 +204,7 @@ nav a,
   border-color: rgba(255,255,255,0.22);
 }
 
-.btn-ghost:hover{
-  background: rgba(255,255,255,0.16);
-}
-
+.btn-ghost:hover{ background: rgba(255,255,255,0.16); }
 .btn-full{ width: 100%; }
 
 /* Trust row */
@@ -239,117 +249,4 @@ nav a,
 .mini-form input{
   padding: 0.8rem 0.9rem;
   border-radius: 12px;
-  border: 1px solid rgba(15,23,42,0.16);
-  font-family: inherit;
-}
-
-.grid2{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.65rem;
-}
-
-/* General Content */
-.content,
-.services {
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-/* Sections / cards (optional but nice for the rest of the page) */
-.section{ padding: 3.25rem 1.5rem; }
-.section-alt{ background: #f6f9f8; }
-.container{ max-width: 1100px; margin: 0 auto; }
-
-.cards{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-.card{
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 1.25rem;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
-  text-align: left;
-}
-
-.card h3{ margin: 0 0 0.35rem; }
-.card p{ margin: 0; color: var(--muted); }
-
-/* Contact Page */
-.contact-page {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 0.8rem 0.9rem;
-  border-radius: 10px;
-  border: 1px solid rgba(15,23,42,0.16);
-  font-family: inherit;
-}
-
-.contact-form button {
-  background-color: var(--green);
-  color: white;
-  padding: 0.85rem;
-  border: none;
-  font-size: 1rem;
-  font-weight: 900;
-  cursor: pointer;
-  border-radius: 12px;
-}
-
-.contact-form button:hover {
-  background-color: var(--green-hover);
-}
-
-/* Footer */
-footer {
-  background-color: var(--green);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-/* Mobile Menu */
-@media (max-width: 768px) {
-  .menu-toggle { display: block; }
-
-  .menu {
-    display: none;
-    width: 100%;
-    background-color: var(--green);
-    padding-top: 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .menu.show { display: flex; }
-
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-    min-width: 100%;
-    border-radius: 12px;
-  }
-
-  .grid2{ grid-template-columns: 1fr; }
-  .hero-inner{ grid-template-columns: 1fr; }
-  .cards{ grid-template-columns: 1fr; }
-}
+  bor
