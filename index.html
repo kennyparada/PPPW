@@ -2,67 +2,84 @@
 <html lang="en">
 <head>
   <link rel="icon" type="image/png" href="Images/LogoTransparent.png" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Potomac Valet Trash | Doorstep Trash Pickup</title>
+  <meta
+    name="description"
+    content="Potomac Valet Trash provides reliable, scheduled doorstep trash pickup for apartment communities. Improve curb appeal, reduce loose trash, and free up maintenance teams."
+  />
 
-  <!-- Load Poppins font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
-  <!-- Load your CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
   <header>
     <div class="logo">
       <a href="index.html">
-        <img src="Images/LogoTransparent.png" alt="Potomac Valet Trash Logo" class="logo-img">
+        <img src="Images/LogoTransparent.png" alt="Potomac Valet Trash Logo" class="logo-img" />
         Potomac Valet Trash
       </a>
     </div>
-    
-    <nav>
-      <button class="menu-toggle">&#9776;</button>
+
+    <nav aria-label="Primary">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+
       <div class="menu">
         <a href="index.html">Home</a>
-        
+
         <div class="dropdown">
-          <a href="#">Services</a>
+          <a href="#" aria-haspopup="true" aria-expanded="false">Services</a>
           <div class="dropdown-content">
             <a href="valet-trash.html">Valet Trash</a>
             <a href="how-it-works.html">How It Works</a>
             <a href="pricing.html">Pricing</a>
           </div>
         </div>
-        
+
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
     </nav>
 
-    <div class="phone">Text or Call: <a href="tel:7035689373">703-568-9373</a></div>
+    <div class="phone">
+      Text or Call: <a href="tel:7035689373">703-568-9373</a>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Valet Trash Services for Apartment Communities</h1>
-      <p>Reliable doorstep trash pickup that keeps your property clean and your team focused.</p>
-      <a href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash%20service%20for%20my%20property." class="quote-btn">
-        Get a Free Quote
-      </a>
-    </div>
-  </section>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Valet Trash Services for Apartment Communities</h1>
+        <p>Reliable doorstep trash pickup that keeps your property clean and your team focused.</p>
 
-  <!-- Value Proposition -->
-  <section class="content">
-    <h2>Why Property Managers Choose Us</h2>
-    <p>
-      Potomac Valet Trash partners with apartment communities to provide consistent, scheduled doorstep trash pickup.
-      We help reduce loose trash, improve curb appeal, and free up maintenance teams from nightly trash duties.
-    </p>
-  </section>
+        <a
+          href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash%20service%20for%20my%20property."
+          class="quote-btn"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </section>
+
+    <!-- Value Prop -->
+    <section class="content">
+      <h2>Why Property Managers Choose Us</h2>
+      <p>
+        Potomac Valet Trash partners with apartment communities to provide consistent, scheduled doorstep trash pickup.
+        We help reduce loose trash, improve curb appeal, and free up maintenance teams from nightly trash duties.
+      </p>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2026 Potomac Valet Trash. All rights reserved.</p>
@@ -74,7 +91,8 @@
     const menu = document.querySelector('.menu');
 
     toggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
+      const isOpen = menu.classList.toggle('show');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   </script>
 
