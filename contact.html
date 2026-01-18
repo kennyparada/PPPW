@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us</title>
+  <title>Contact Us | Potomac Valet Trash</title>
   <link rel="icon" type="image/png" href="Images/LogoTransparent.png" />
 
   <!-- Load Poppins font from Google Fonts -->
@@ -18,59 +18,68 @@
     <div class="logo">
       <a href="index.html">
         <img src="Images/LogoTransparent.png" alt="Logo" class="logo-img">
-        BluePulse Pressure Washing
+        Potomac Valet Trash
       </a>
     </div>
+
     <nav>
-      <button class="menu-toggle">&#9776;</button> <!-- hamburger icon -->
+      <button class="menu-toggle">&#9776;</button>
       <div class="menu">
         <a href="index.html">Home</a>
+
         <div class="dropdown">
           <a href="#">Services</a>
           <div class="dropdown-content">
-            <a href="residential.html">Residential</a>
-            <a href="commercial.html">Commercial</a>
-            <a href="what-we-clean.html">What We Clean</a>
+            <a href="valet-trash.html">Valet Trash</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="pricing.html">Pricing</a>
           </div>
         </div>
-        <a href="pricing.html">Pricing</a>
+
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
     </nav>
-    <div class="phone">Text or Call: <a href="tel:9195926347">703-568-9373</a></div>
+
+    <div class="phone">Text or Call: <a href="tel:7035689373">703-568-9373</a></div>
   </header>
 
   <section class="content contact-page">
     <h1>Contact Us</h1>
-    <p><strong>Email:</strong> <a href="mailto:Info@BluePulseWash.com">Info@BluePulseWash.com</a></p>
-    <p><strong>Phone:</strong> <a href="tel:9195926347">703-568-9373</a></p>
-    <p>Or use the form below to request a quote or ask a question.</p>
+    <p><strong>Email:</strong> <a href="mailto:Info@PotomacValetTrash.com">Info@PotomacValetTrash.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:7035689373">703-568-9373</a></p>
+    <p>
+      Use the form below to request a quote. If you’re a property manager, include the property name and number of units/buildings for faster pricing.
+    </p>
 
-  <form action="https://formspree.io/f/mzzrwady" method="POST" class="contact-form">
-    <label for="name">Your name</label>
-    <input type="text" id="name" name="name" required />
+    <form action="https://formspree.io/f/mzzrwady" method="POST" class="contact-form">
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" required />
 
-    <label for="email">Your email</label>
-    <input type="email" id="email" name="email" required />
+      <label for="email">Your email</label>
+      <input type="email" id="email" name="email" required />
 
-    <label for="phone">Your number</label>
-    <input type="tel" id="phone" name="phone" required />
- 
-    <label for="message">Your message</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="phone">Your number</label>
+      <input type="tel" id="phone" name="phone" required />
 
-    <button type="submit">Submit</button>
-  </form>
+      <label for="property">Property name (optional)</label>
+      <input type="text" id="property" name="property" />
 
+      <label for="units">Approx. number of units (optional)</label>
+      <input type="text" id="units" name="units" />
+
+      <label for="message">Your message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Request a Quote</button>
+    </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 BluePulse Pressure Washing. All rights reserved.</p>
+    <p>&copy; 2026 Potomac Valet Trash. All rights reserved.</p>
   </footer>
 
-  <!-- ✅ Add JavaScript to pre-fill message -->
- <script>
+  <script>
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
 
@@ -80,11 +89,10 @@
   </script>
 
   <script>
-  if (location.protocol !== 'https:') {
-    location.replace(`https:${location.href.substring(location.protocol.length)}`);
-  }
+    if (location.protocol !== 'https:') {
+      location.replace(`https:${location.href.substring(location.protocol.length)}`);
+    }
   </script>
-
 
 </body>
 </html>
