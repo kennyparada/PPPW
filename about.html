@@ -22,13 +22,13 @@
       </a>
     </div>
 
-    <nav>
-      <button class="menu-toggle">&#9776;</button>
+    <nav aria-label="Primary">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
       <div class="menu">
         <a href="index.html">Home</a>
 
         <div class="dropdown">
-          <a href="#">Services</a>
+          <a href="#" aria-haspopup="true" aria-expanded="false">Services</a>
           <div class="dropdown-content">
             <a href="valet-trash.html">Valet Trash</a>
             <a href="how-it-works.html">How It Works</a>
@@ -44,37 +44,45 @@
     <div class="phone">Text or Call: <a href="tel:7035689373">703-568-9373</a></div>
   </header>
 
-  <!-- About Section -->
-  <section class="about-section">
-    <div class="about-image">
-      <img src="Images/LogoTransparent.png" alt="Potomac Valet Trash Logo">
-    </div>
+  <main>
+    <section class="about-section">
+      <div class="about-wrap">
+        <div class="about-image">
+          <img src="Images/LogoTransparent.png" alt="Potomac Valet Trash Logo">
+        </div>
 
-    <div class="about-text">
-      <h1>Cleaner Communities. Less Work for Your Team.</h1>
+        <div class="about-text">
+          <h1>Cleaner Communities. Less Work for Your Team.</h1>
 
-      <p>
-        Potomac Valet Trash partners with apartment communities to provide reliable doorstep trash pickup on scheduled nights.
-        We help reduce loose trash, improve curb appeal, and take nightly trash runs off your maintenance team’s plate.
-      </p>
+          <p>
+            Potomac Valet Trash partners with apartment communities to provide reliable doorstep trash pickup on scheduled nights.
+            We help reduce loose trash, improve curb appeal, and take nightly trash runs off your maintenance team’s plate.
+          </p>
 
-      <p>
-        Our focus is simple: consistent service, clear communication, and professional standards property managers can depend on.
-      </p>
+          <p>
+            Our focus is simple: consistent service, clear communication, and professional standards property managers can depend on.
+          </p>
 
-      <h2>What We Deliver</h2>
-      <ul style="list-style: none; padding-left: 0; margin: 1rem 0;">
-        <li>✓ Scheduled doorstep pickup (Monday–Friday)</li>
-        <li>✓ Bagged household trash to on-site dumpsters only</li>
-        <li>✓ Clear resident rules + missed-pickup standards</li>
-      </ul>
+          <h2>What We Deliver</h2>
+          <ul class="checklist">
+            <li>Scheduled doorstep pickup (Monday–Friday)</li>
+            <li>Bagged household trash to on-site dumpsters only</li>
+            <li>Clear resident rules + missed-pickup standards</li>
+          </ul>
 
-      <p><strong>Want pricing for your property?</strong></p>
-      <a href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash%20service%20for%20my%20apartment%20community." class="quote-btn">
-        Get a Free Quote
-      </a>
-    </div>
-  </section>
+          <div class="about-cta">
+            <p><strong>Want pricing for your property?</strong></p>
+            <a
+              href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash%20service%20for%20my%20apartment%20community."
+              class="btn btn-primary"
+            >
+              Get a Free Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2026 Potomac Valet Trash. All rights reserved.</p>
@@ -85,7 +93,8 @@
     const menu = document.querySelector('.menu');
 
     toggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
+      const isOpen = menu.classList.toggle('show');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   </script>
 
