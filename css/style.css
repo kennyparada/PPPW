@@ -1,5 +1,5 @@
 /* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 /* Theme tokens */
 :root{
@@ -16,10 +16,9 @@
   --shadow: 0 12px 30px rgba(0,0,0,0.10);
 }
 
-/* Base Styling */
-* { box-sizing: border-box; }
+*{ box-sizing: border-box; }
 
-body {
+body{
   margin: 0;
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
@@ -27,7 +26,7 @@ body {
   background: var(--bg);
 }
 
-a { text-decoration: none; color: inherit; }
+a{ text-decoration: none; color: inherit; }
 
 /* =========================
    Header
@@ -63,8 +62,14 @@ header .phone{ flex: 1; display: flex; justify-content: flex-end; }
 .logo-img{
   max-height: 45px;
   margin-right: 10px;
-  max-width: 100%;
   height: auto;
+}
+
+/* optional: style the Get Quote pill in nav */
+.nav-cta{
+  background: rgba(255,255,255,0.18);
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
 }
 
 /* Hamburger */
@@ -128,8 +133,7 @@ nav a:focus-visible,
 .dropdown-content a:hover{ background-color: var(--green-hover); }
 
 /* =========================
-   Nicer Hero
-   Use: <section class="hero hero--clean"><div class="hero-inner">...</div></section>
+   Hero
 ========================= */
 .hero--clean{
   padding: 3.5rem 1.5rem;
@@ -264,13 +268,8 @@ nav a:focus-visible,
    Bottom sections styling
    (Benefits / How it works / CTA)
 ========================= */
-.section{
-  padding: 3.25rem 1.5rem;
-}
-
-.section-alt{
-  background: #f6f9f8;
-}
+.section{ padding: 3.25rem 1.5rem; }
+.section-alt{ background: #f6f9f8; }
 
 .container{
   max-width: 1100px;
@@ -286,6 +285,10 @@ nav a:focus-visible,
   margin: 0 0 1.5rem;
   color: var(--muted);
 }
+
+/* (Optional) center headings for a cleaner look */
+.section-title,
+.section-subtitle{ text-align: center; }
 
 .cards{
   display:grid;
@@ -315,7 +318,6 @@ nav a:focus-visible,
 .steps{
   margin: 0 0 1rem;
   padding-left: 1.15rem;
-  color: var(--text);
 }
 
 .steps li{ margin: 0.6rem 0; }
@@ -353,12 +355,12 @@ nav a:focus-visible,
 /* Footer */
 footer{
   background-color: var(--green);
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 1rem;
 }
 
-/* Mobile Menu + responsive */
+/* Responsive */
 @media (max-width: 920px){
   .hero-inner{ grid-template-columns: 1fr; }
   .split{ grid-template-columns: 1fr; }
@@ -369,7 +371,6 @@ footer{
 @media (max-width: 768px){
   .menu-toggle{ display: block; }
 
-  /* stack header items */
   header nav{ justify-content: flex-end; }
   header .phone{ justify-content: flex-start; }
 
