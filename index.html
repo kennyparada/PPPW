@@ -14,7 +14,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -23,21 +23,33 @@
 
   <header class="site-header">
     <div class="logo">
-      <a href="index.html">
+      <a href="index.html" aria-label="Potomac Valet Trash Home">
         <img src="Images/pvt-logo copy.png" alt="Potomac Valet Trash Logo" class="logo-img" />
         <span class="logo-text">Potomac Valet Trash</span>
       </a>
     </div>
 
     <nav aria-label="Primary">
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <!-- Added aria-controls to properly connect button to the menu -->
+      <button
+        class="menu-toggle"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="primary-menu"
+        type="button"
+      >
+        &#9776;
+      </button>
 
-      <div class="menu">
+      <!-- Added id for aria-controls -->
+      <div class="menu" id="primary-menu">
         <a href="index.html">Home</a>
 
         <div class="dropdown">
-          <a href="valet-trash.html" class="services-link" aria-haspopup="true" aria-expanded="false">Services</a>
-          <div class="dropdown-content">
+          <a href="valet-trash.html" class="services-link" aria-haspopup="true" aria-expanded="false">
+            Services
+          </a>
+          <div class="dropdown-content" aria-label="Services submenu">
             <a href="valet-trash.html">Valet Trash</a>
             <a href="how-it-works.html">How It Works</a>
             <a href="pricing.html">Pricing</a>
@@ -73,7 +85,9 @@
             >
               Get a Free Quote
             </a>
-            <a href="how-it-works.html" class="btn btn-primary">See how it works</a>
+
+            <!-- FIX: this should be ghost style (not yellow) -->
+            <a href="how-it-works.html" class="btn btn-ghost">See how it works</a>
           </div>
 
           <div class="trust-row">
@@ -99,8 +113,8 @@
           <form action="https://formspree.io/f/mzzrwady" method="POST" class="mini-form">
             <input type="text" name="property" placeholder="Property name" />
             <div class="grid2">
-              <input type="text" name="units" placeholder="# of units" />
-              <input type="text" name="buildings" placeholder="# of buildings" />
+              <input type="text" name="units" placeholder="# of units" inputmode="numeric" />
+              <input type="text" name="buildings" placeholder="# of buildings" inputmode="numeric" />
             </div>
             <input type="text" name="name" placeholder="Your name" required />
             <input type="email" name="email" placeholder="Email" required />
