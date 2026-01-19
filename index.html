@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="Images/PVT Logo.png" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- ✅ Use a no-space filename for GitHub Pages reliability -->
+  <link rel="icon" type="image/png" href="Images/pvt-logo.png" />
+
   <title>Potomac Valet Trash | Doorstep Trash Pickup</title>
-  <meta name="description" content="Reliable Monday–Friday valet trash pickup for apartment communities in the DMV. Cleaner common areas, happier residents, less strain on maintenance." />
+  <meta
+    name="description"
+    content="Reliable Monday–Friday valet trash pickup for apartment communities in the DMV. Cleaner common areas, happier residents, less strain on maintenance."
+  />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +25,7 @@
   <header class="site-header">
     <div class="logo">
       <a href="index.html">
-        <img src="Images/PVT Logo.png" alt="Potomac Valet Trash Logo" class="logo-img" />
+        <img src="Images/pvt-logo.png" alt="Potomac Valet Trash Logo" class="logo-img" />
         Potomac Valet Trash
       </a>
     </div>
@@ -32,9 +37,9 @@
         <a href="index.html">Home</a>
 
         <div class="dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">Services</a>
+          <!-- ✅ Make Services clickable (instead of href="#") -->
+          <a href="valet-trash.html" class="services-link" aria-haspopup="true" aria-expanded="false">Services</a>
           <div class="dropdown-content">
-            <!-- IMPORTANT: these must match your actual filenames in GitHub -->
             <a href="valet-trash.html">Valet Trash</a>
             <a href="how-it-works.html">How It Works</a>
             <a href="pricing.html">Pricing</a>
@@ -110,78 +115,106 @@
     </section>
 
     <!-- Benefits -->
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Why Property Managers Choose Us</h2>
-    <p class="section-subtitle">Cleaner common areas, fewer complaints, and less strain on maintenance.</p>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Why Property Managers Choose Us</h2>
+        <p class="section-subtitle">Cleaner common areas, fewer complaints, and less strain on maintenance.</p>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Cleaner common areas</h3>
-        <p>Less loose trash in hallways, breezeways, and walk-ups — a cleaner look every morning.</p>
+        <div class="cards">
+          <div class="card">
+            <h3>Cleaner common areas</h3>
+            <p>Less loose trash in hallways, breezeways, and walk-ups — a cleaner look every morning.</p>
+          </div>
+
+          <div class="card">
+            <h3>Less load on maintenance</h3>
+            <p>We handle nightly pickup so your team can stay focused on work orders and turns.</p>
+          </div>
+
+          <div class="card">
+            <h3>Simple rollout</h3>
+            <p>We align on the pickup window, resident rules, and dumpster access — then go live.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Less load on maintenance</h3>
-        <p>We handle nightly pickup so your team can stay focused on work orders and turns.</p>
+    <!-- How it works -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="split">
+          <div>
+            <h2 class="section-title">How it works</h2>
+            <p class="section-subtitle">Consistent pickup Monday–Friday (pickup window set by the community).</p>
+
+            <ol class="steps">
+              <li><strong>Confirm details</strong> — layout, dumpster access, and pickup window.</li>
+              <li><strong>Residents set out bags</strong> — tied, leak-free, during the window.</li>
+              <li><strong>We collect + dispose</strong> — to onsite dumpsters/compactors.</li>
+            </ol>
+
+            <a href="how-it-works.html" class="btn btn-ghost">See full process</a>
+          </div>
+
+          <div class="panel">
+            <h3>Service details</h3>
+            <p class="muted tiny" style="margin-top:0.25rem;">Designed for multi-building and garden-style communities.</p>
+
+            <div class="divider"></div>
+
+            <p><strong>Schedule:</strong> Monday–Friday</p>
+            <p><strong>Items:</strong> Bagged household trash only</p>
+            <p><strong>Disposal:</strong> On-site dumpsters/compactors</p>
+
+            <div class="divider"></div>
+
+            <a href="pricing.html" class="btn btn-primary btn-full">View pricing</a>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Simple rollout</h3>
-        <p>We align on the pickup window, resident rules, and dumpster access — then go live.</p>
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-inner">
+          <div>
+            <h2 style="margin:0 0 0.25rem;">Want pricing for your property?</h2>
+            <p class="muted" style="margin:0;">Send the property name + # of units/buildings. We’ll respond quickly.</p>
+          </div>
+
+          <a
+            href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash%20service%20for%20my%20apartment%20community.%20Property%20name%3A%20%5B%5D%20Units%3A%20%5B%5D%20Buildings%3A%20%5B%5D"
+            class="btn btn-primary"
+          >
+            Request a Quote
+          </a>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- How it works -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="split">
-      <div>
-        <h2 class="section-title">How it works</h2>
-        <p class="section-subtitle">Consistent pickup Monday–Friday (pickup window set by the community).</p>
+  </main>
 
-        <ol class="steps">
-          <li><strong>Confirm details</strong> — layout, dumpster access, and pickup window.</li>
-          <li><strong>Residents set out bags</strong> — tied, leak-free, during the window.</li>
-          <li><strong>We collect + dispose</strong> — to onsite dumpsters/compactors.</li>
-        </ol>
+  <footer>
+    <p>&copy; 2026 Potomac Valet Trash. All rights reserved.</p>
+  </footer>
 
-        <a href="how-it-works.html" class="btn btn-ghost">See full process</a>
-      </div>
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
 
-      <div class="panel">
-        <h3>Service details</h3>
-        <p class="muted tiny" style="margin-top:0.25rem;">Designed for multi-building and garden-style communities.</p>
+    toggle.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('show');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
 
-        <div class="divider"></div>
+    // Prevent "Services" from jumping to top on click (nice UX)
+    const servicesLink = document.querySelector('.services-link');
+    if (servicesLink && servicesLink.getAttribute('href') === '#') {
+      servicesLink.addEventListener('click', (e) => e.preventDefault());
+    }
+  </script>
 
-        <p><strong>Schedule:</strong> Monday–Friday</p>
-        <p><strong>Items:</strong> Bagged household trash only</p>
-        <p><strong>Disposal:</strong> On-site dumpsters/compactors</p>
-
-        <div class="divider"></div>
-
-        <a href="pricing.html" class="btn btn-primary btn-full">View pricing</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <div class="container">
-    <div class="cta-inner">
-      <div>
-        <h2 style="margin:0 0 0.25rem;">Want pricing for your property?</h2>
-        <p class="muted" style="margin:0;">Send the property name + # of units/buildings. We’ll respond quickly.</p>
-      </div>
-
-      <a href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash%20service%20for%20my%20apartment%20community.%20Property%20name%3A%20%5B%5D%20Units%3A%20%5B%5D%20Buildings%3A%20%5B%5D"
-         class="btn btn-primary">
-        Request a Quote
-      </a>
-    </div>
-  </div>
-</section>
+</body>
+</html>
