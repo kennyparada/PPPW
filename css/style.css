@@ -527,3 +527,16 @@ footer{
 .site-header .logo a:hover .logo-text{
   color: #0f172a;
 }
+
+/* FORCE logo text styling on desktop + mobile */
+header.site-header .logo .logo-text{
+  color: #0b2545;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+header.site-header .logo a:hover .logo-text{
+  color: #0b2545;
+}
+
