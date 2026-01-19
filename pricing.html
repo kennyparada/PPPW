@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Contact | Potomac Valet Trash</title>
+  <title>Pricing | Potomac Valet Trash</title>
 
   <!-- Use a no-space filename -->
   <link rel="icon" type="image/png" href="Images/pvt-logo.png" />
@@ -47,82 +47,53 @@
       </div>
     </nav>
 
-    <div class="phone">Text or Call: <a href="tel:7035689373">703-568-9373</a></div>
+    <div class="phone">
+      Text or Call: <a href="tel:7035689373">703-568-9373</a>
+    </div>
   </header>
 
   <main>
     <section class="section">
       <div class="container">
-        <h1 class="section-title">Contact</h1>
+        <h1 class="section-title">Pricing</h1>
         <p class="section-subtitle">
-          Request a quote or ask a question — we typically respond quickly.
+          Pricing depends on your property layout and service schedule.
         </p>
 
         <div class="split">
-          <!-- Left info card -->
           <div class="card">
-            <h3 style="margin:0 0 0.5rem;">Get in touch</h3>
-            <p class="muted" style="margin:0 0 1rem;">
-              The fastest way to get accurate pricing is to share your property name and unit/building counts.
+            <h3>What affects pricing</h3>
+            <p class="muted" style="margin:0.25rem 0 0;">
+              We price based on the details that change labor and routing:
             </p>
 
-            <div class="divider"></div>
-
-            <p style="margin:0.25rem 0;"><strong>Email:</strong> <a href="mailto:Info@PotomacValetTrash.com">Info@PotomacValetTrash.com</a></p>
-            <p style="margin:0.25rem 0;"><strong>Phone/Text:</strong> <a href="tel:7035689373">703-568-9373</a></p>
-
-            <div class="divider"></div>
-
-            <h3 style="margin:0 0 0.5rem;">Helpful details</h3>
-            <ul style="margin:0; padding-left: 1.15rem;">
-              <li>Property name</li>
-              <li># of units and buildings</li>
-              <li>Stairs vs. elevators (or walk-up)</li>
-              <li>Preferred pickup schedule (Mon–Fri or custom)</li>
+            <ul style="margin: 1rem 0 0; padding-left: 1.15rem; color: var(--text);">
+              <li>Number of units + buildings</li>
+              <li>Stairs vs. elevators / walk-up distance</li>
+              <li>Pickup frequency (Mon–Fri or custom)</li>
+              <li>Dumpster/compactor locations + access</li>
+              <li>Community rules (bag limits, set-out window)</li>
             </ul>
           </div>
 
-          <!-- Right form panel -->
           <div class="panel">
-            <h3 style="margin:0 0 0.25rem;">Request a Quote</h3>
-            <p class="muted" style="margin:0 0 1rem;">
-              Fill this out and we’ll get back to you with next steps.
+            <h3>Get a fast quote</h3>
+            <p class="muted" style="margin-top:0.25rem;">
+              Send a few details and we’ll reply quickly with a simple estimate.
             </p>
 
-            <!-- Formspree (use your existing endpoint) -->
-            <form action="https://formspree.io/f/mzzrwady" method="POST" class="mini-form">
-              <!-- optional: helps you recognize the page -->
-              <input type="hidden" name="source" value="Contact page" />
+            <div class="divider"></div>
 
-              <div class="grid2">
-                <input type="text" name="name" placeholder="Your name" required />
-                <input type="email" name="email" placeholder="Email" required />
-              </div>
+            <a
+              href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash%20service.%20Property%20name%3A%20%0AUnits%3A%20%0ABuildings%3A%20%0AStairs%20or%20elevators%3A%20%0APickup%20nights%20desired%3A%20"
+              class="btn btn-primary btn-full"
+            >
+              Request a Quote
+            </a>
 
-              <div class="grid2">
-                <input type="tel" name="phone" placeholder="Phone (optional)" />
-                <input type="text" name="property" placeholder="Property name (optional)" />
-              </div>
-
-              <div class="grid2">
-                <input type="text" name="units" placeholder="# of units (optional)" />
-                <input type="text" name="buildings" placeholder="# of buildings (optional)" />
-              </div>
-
-              <textarea
-                name="message"
-                placeholder="Your message (include stairs vs elevators + pickup nights if you can)"
-                rows="6"
-                required
-                style="padding: 0.8rem 0.9rem; border-radius: 12px; border: 1px solid rgba(15,23,42,0.16); font-family: inherit; width: 100%; resize: vertical;"
-              ></textarea>
-
-              <button type="submit" class="btn btn-primary btn-full">Send Request</button>
-
-              <p class="tiny muted" style="margin: 0.75rem 0 0;">
-                Prefer text? <a href="tel:7035689373">703-568-9373</a>
-              </p>
-            </form>
+            <p class="tiny muted" style="margin: 0.75rem 0 0;">
+              Or call/text: <a href="tel:7035689373">703-568-937-3</a>
+            </p>
           </div>
         </div>
 
