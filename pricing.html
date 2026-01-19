@@ -3,22 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Pricing | Potomac Valet Trash</title>
 
-  <!-- Use a no-space filename -->
   <link rel="icon" type="image/png" href="Images/pvt-logo.png" />
-
-  <!-- Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
-  <!-- Match homepage header -->
+  <!-- Header -->
   <header class="site-header">
     <div class="logo">
       <a href="index.html">
@@ -47,56 +41,104 @@
       </div>
     </nav>
 
-    <div class="phone">
-      Text or Call: <a href="tel:7035689373">703-568-9373</a>
-    </div>
+    <div class="phone">Text or Call: <a href="tel:7035689373">703-568-9373</a></div>
   </header>
 
   <main>
-    <section class="section">
+    <!-- Page header (NOT homepage hero) -->
+    <section class="page-hero">
       <div class="container">
-        <h1 class="section-title">Pricing</h1>
-        <p class="section-subtitle">
-          Pricing depends on your property layout and service schedule.
+        <h1>Pricing</h1>
+        <p class="lead">
+          Pricing depends on your property layout and service schedule. Share a few details and we’ll send a quick estimate.
         </p>
+      </div>
+    </section>
 
-        <div class="split">
-          <div class="card">
-            <h3>What affects pricing</h3>
-            <p class="muted" style="margin:0.25rem 0 0;">
-              We price based on the details that change labor and routing:
-            </p>
+    <!-- Page content -->
+    <section class="page-wrap">
+      <div class="container">
+        <div class="page-grid">
 
-            <ul style="margin: 1rem 0 0; padding-left: 1.15rem; color: var(--text);">
-              <li>Number of units + buildings</li>
-              <li>Stairs vs. elevators / walk-up distance</li>
-              <li>Pickup frequency (Mon–Fri or custom)</li>
-              <li>Dumpster/compactor locations + access</li>
-              <li>Community rules (bag limits, set-out window)</li>
-            </ul>
-          </div>
+          <!-- Main column -->
+          <div>
 
-          <div class="panel">
-            <h3>Get a fast quote</h3>
-            <p class="muted" style="margin-top:0.25rem;">
-              Send a few details and we’ll reply quickly with a simple estimate.
-            </p>
+            <div class="card">
+              <h2 style="margin:0 0 .35rem;">What affects pricing</h2>
+              <p class="muted" style="margin:0 0 1rem;">
+                We price based on the factors that change labor and routing.
+              </p>
+
+              <ul class="info-list">
+                <li>Number of units + buildings</li>
+                <li>Stairs vs. elevators / walk-up distance</li>
+                <li>Pickup frequency (Mon–Fri or custom)</li>
+                <li>Dumpster/compactor locations + access</li>
+                <li>Community rules (bag limits, set-out window)</li>
+              </ul>
+            </div>
 
             <div class="divider"></div>
 
-            <a
-              href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash%20service.%20Property%20name%3A%20%0AUnits%3A%20%0ABuildings%3A%20%0AStairs%20or%20elevators%3A%20%0APickup%20nights%20desired%3A%20"
-              class="btn btn-primary btn-full"
-            >
-              Request a Quote
-            </a>
+            <div class="card">
+              <h2 style="margin:0 0 .35rem;">A typical quoting process</h2>
+              <p class="muted" style="margin:0 0 1rem;">
+                Simple and quick — most properties can get an estimate fast once we have the basics.
+              </p>
 
-            <p class="tiny muted" style="margin: 0.75rem 0 0;">
-              Or call/text: <a href="tel:7035689373">703-568-937-3</a>
-            </p>
+              <ul class="info-list">
+                <li>Send property name + units/buildings</li>
+                <li>Confirm stairs vs. elevators + dumpster locations</li>
+                <li>Choose pickup nights + set-out window</li>
+                <li>We send pricing + rollout plan</li>
+              </ul>
+            </div>
+
           </div>
-        </div>
 
+          <!-- Right sticky column -->
+          <aside class="sticky-side">
+            <div class="side-card">
+              <h3 style="margin:0 0 .35rem;">Get a fast quote</h3>
+              <p class="muted" style="margin:0;">
+                Send a few details and we’ll reply quickly with a simple estimate.
+              </p>
+
+              <div class="divider"></div>
+
+              <a
+                href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash%20service.%20Property%20name%3A%20%0AUnits%3A%20%0ABuildings%3A%20%0AStairs%20or%20elevators%3A%20%0APickup%20nights%20desired%3A%20"
+                class="btn btn-primary btn-full"
+              >
+                Request a Quote
+              </a>
+
+              <p class="tiny muted" style="margin: .75rem 0 0;">
+                Or call/text: <a href="tel:7035689373">703-568-9373</a>
+              </p>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-inner">
+          <div>
+            <h2 style="margin:0 0 .25rem;">Want pricing for your property?</h2>
+            <p class="muted" style="margin:0;">Send the property name + units/buildings and we’ll respond quickly.</p>
+          </div>
+
+          <a
+            href="contact.html?message=Hi%2C%20I%27d%20like%20pricing%20for%20valet%20trash.%20Property%20name%3A%20%0AUnits%3A%20%0ABuildings%3A%20%0A"
+            class="btn btn-primary"
+          >
+            Request a Quote
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -105,7 +147,6 @@
     <p>&copy; 2026 Potomac Valet Trash. All rights reserved.</p>
   </footer>
 
-  <!-- Mobile Menu Script -->
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
