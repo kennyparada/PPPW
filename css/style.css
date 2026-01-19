@@ -515,5 +515,14 @@ footer{
   }
   .sticky-side{
     position: static;
-  }
+}
+  .site-header .logo-text{
+  font-size: 1.6rem;        /* Bigger */
+  font-weight: 700;
+  color: #0f172a;           /* Dark blue */
+  letter-spacing: 0.3px;
+}
+
+.site-header .logo a:hover .logo-text{
+  color: #0f172a;
 }
