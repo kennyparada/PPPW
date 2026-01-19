@@ -395,3 +395,14 @@ footer{
 
   .grid2{ grid-template-columns: 1fr; }
 }
+
+.nav-cta{
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 0.5rem 0.85rem;
+  border-radius: 12px;
+  font-weight: 800;
+}
+.nav-cta:hover{
+  background: rgba(255,255,255,0.25);
+}
