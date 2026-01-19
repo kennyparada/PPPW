@@ -54,8 +54,6 @@ header{
   display: flex;
   align-items: center;
   font-weight: 800;
-  font-size: 1.25rem;
-  color: #fff;
   white-space: nowrap;
 }
 
