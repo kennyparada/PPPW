@@ -406,3 +406,94 @@ footer{
 .nav-cta:hover{
   background: rgba(255,255,255,0.25);
 }
+
+/* =========================
+   Internal Page Layout (Services / How it works / Pricing / Contact)
+========================= */
+
+.page-hero{
+  padding: 2.25rem 1.5rem 1.25rem;
+  background: #f7faf9;
+  border-bottom: 1px solid rgba(15,23,42,0.08);
+}
+
+.page-hero h1{
+  margin: 0 0 .35rem;
+  font-size: clamp(1.9rem, 2.2vw + 1rem, 2.6rem);
+  line-height: 1.15;
+}
+
+.page-hero .lead{
+  margin: 0;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.page-wrap{
+  padding: 1.75rem 1.5rem 3rem;
+  background: #ffffff;
+}
+
+.page-grid{
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.sticky-side{
+  position: sticky;
+  top: 1rem;
+  align-self: start;
+}
+
+.side-card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+.info-list{
+  margin: 0.75rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--text);
+}
+
+.info-list li{
+  margin: 0.5rem 0;
+  color: var(--muted);
+}
+
+/* Step cards used on internal pages */
+.steps{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step{
+  border: 1px solid rgba(15,23,42,0.10);
+  border-radius: 14px;
+  padding: 0.9rem;
+  background: #fff;
+}
+
+.kicker{
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+/* Responsive internal pages */
+@media (max-width: 920px){
+  .page-grid{
+    grid-template-columns: 1fr;
+  }
+  .sticky-side{
+    position: static;
+  }
+}
