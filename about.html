@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Potomac Valet Trash | Doorstep Trash Pickup</title>
-  <link rel="icon" type="image/png" href="Images/PVT Logo copy.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>About Potomac Valet Trash | Doorstep Trash Pickup</title>
+
+  <!-- Use a no-space filename -->
+  <link rel="icon" type="image/png" href="Images/pvt-logo.png" />
+
+  <!-- Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-  <header>
+  <!-- Match homepage header -->
+  <header class="site-header">
     <div class="logo">
       <a href="index.html">
-        <img src="Images/PVT Logo copy.png" alt="Potomac Valet Trash Logo" class="logo-img">
+        <img src="Images/pvt-logo.png" alt="Potomac Valet Trash Logo" class="logo-img" />
         Potomac Valet Trash
       </a>
     </div>
 
     <nav aria-label="Primary">
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+
       <div class="menu">
         <a href="index.html">Home</a>
 
         <div class="dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">Services</a>
+          <!-- Make Services clickable -->
+          <a href="valet-trash.html" class="services-link" aria-haspopup="true" aria-expanded="false">Services</a>
           <div class="dropdown-content">
             <a href="valet-trash.html">Valet Trash</a>
             <a href="how-it-works.html">How It Works</a>
@@ -37,7 +44,7 @@
         </div>
 
         <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="nav-cta">Get Quote</a>
       </div>
     </nav>
 
@@ -45,41 +52,49 @@
   </header>
 
   <main>
-    <section class="about-section">
-      <div class="about-wrap">
-        <div class="about-image">
-          <img src="Images/PVT Logo copy.png" alt="Potomac Valet Trash Logo">
-        </div>
+    <section class="section">
+      <div class="container">
+        <div class="split">
+          <div class="card">
+            <h1 style="margin:0 0 0.5rem;">Cleaner Communities. Less Work for Your Team.</h1>
+            <p class="muted" style="margin:0 0 1rem;">
+              Potomac Valet Trash partners with apartment communities to provide reliable doorstep trash pickup.
+              We reduce loose trash, improve curb appeal, and take nightly trash runs off your maintenance team’s plate.
+            </p>
 
-        <div class="about-text">
-          <h1>Cleaner Communities. Less Work for Your Team.</h1>
+            <p style="margin:0 0 1.25rem;">
+              Our focus is simple: consistent service, clear communication, and professional standards property managers can depend on.
+            </p>
 
-          <p>
-            Potomac Valet Trash partners with apartment communities to provide reliable doorstep trash pickup on scheduled nights.
-            We help reduce loose trash, improve curb appeal, and take nightly trash runs off your maintenance team’s plate.
-          </p>
+            <h2 style="margin:0 0 0.75rem;">What We Deliver</h2>
+            <ul style="margin:0; padding-left: 1.15rem;">
+              <li>Scheduled doorstep pickup (Monday–Friday)</li>
+              <li>Bagged household trash to on-site dumpsters only</li>
+              <li>Clear resident rules + missed-pickup standards</li>
+            </ul>
+          </div>
 
-          <p>
-            Our focus is simple: consistent service, clear communication, and professional standards property managers can depend on.
-          </p>
+          <div class="panel">
+            <h3 style="margin:0 0 0.25rem;">Want pricing for your property?</h3>
+            <p class="muted" style="margin:0 0 1rem;">
+              Share your property name + unit/building count and we’ll respond quickly.
+            </p>
 
-          <h2>What We Deliver</h2>
-          <ul class="checklist">
-            <li>Scheduled doorstep pickup (Monday–Friday)</li>
-            <li>Bagged household trash to on-site dumpsters only</li>
-            <li>Clear resident rules + missed-pickup standards</li>
-          </ul>
+            <div class="divider"></div>
 
-          <div class="about-cta">
-            <p><strong>Want pricing for your property?</strong></p>
             <a
-              href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash%20service%20for%20my%20apartment%20community."
-              class="btn btn-primary"
+              href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash%20service%20for%20my%20apartment%20community.%20Property%20name%3A%20%0AUnits%3A%20%0ABuildings%3A%20"
+              class="btn btn-primary btn-full"
             >
               Get a Free Quote
             </a>
+
+            <p class="tiny muted" style="margin: 0.75rem 0 0;">
+              Or call/text: <a href="tel:7035689373">703-568-9373</a>
+            </p>
           </div>
         </div>
+
       </div>
     </section>
   </main>
@@ -88,6 +103,7 @@
     <p>&copy; 2026 Potomac Valet Trash. All rights reserved.</p>
   </footer>
 
+  <!-- Mobile Menu Script -->
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
