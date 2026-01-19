@@ -45,9 +45,9 @@ header{
 }
 
 /* 3-column layout on desktop */
-header .logo{ flex: 1; }
-header nav{ flex: 1; display: flex; justify-content: center; }
-header .phone{ flex: 1; display: flex; justify-content: flex-end; }
+.site-header .logo{ flex: 1; }
+.site-header nav{ flex: 1; display: flex; justify-content: center; }
+.site-header .phone{ flex: 1; display: flex; justify-content: flex-end; }
 
 .logo,
 .logo a{
