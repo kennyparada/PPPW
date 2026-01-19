@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ✅ Use a no-space filename for GitHub Pages reliability -->
   <link rel="icon" type="image/png" href="Images/pvt-logo.png" />
 
   <title>Potomac Valet Trash | Doorstep Trash Pickup</title>
@@ -37,7 +36,6 @@
         <a href="index.html">Home</a>
 
         <div class="dropdown">
-          <!-- ✅ Make Services clickable (instead of href="#") -->
           <a href="valet-trash.html" class="services-link" aria-haspopup="true" aria-expanded="false">Services</a>
           <div class="dropdown-content">
             <a href="valet-trash.html">Valet Trash</a>
@@ -118,7 +116,9 @@
     <section class="section">
       <div class="container">
         <h2 class="section-title">Why Property Managers Choose Us</h2>
-        <p class="section-subtitle">Cleaner common areas, fewer complaints, and less strain on maintenance.</p>
+        <p class="section-subtitle">
+          Cleaner common areas, fewer complaints, and less strain on maintenance.
+        </p>
 
         <div class="cards">
           <div class="card">
@@ -199,8 +199,8 @@
     <p>&copy; 2026 Potomac Valet Trash. All rights reserved.</p>
   </footer>
 
+  <!-- Mobile Menu Script -->
   <script>
-    // Mobile menu toggle
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
 
@@ -208,12 +208,6 @@
       const isOpen = menu.classList.toggle('show');
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
-
-    // Prevent "Services" from jumping to top on click (nice UX)
-    const servicesLink = document.querySelector('.services-link');
-    if (servicesLink && servicesLink.getAttribute('href') === '#') {
-      servicesLink.addEventListener('click', (e) => e.preventDefault());
-    }
   </script>
 
 </body>
