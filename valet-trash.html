@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Valet Trash for Apartments | Potomac Valet Trash</title>
-  <link rel="icon" type="image/png" href="Images/PVT Logo copy.png" />
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Use a no-space filename -->
+  <link rel="icon" type="image/png" href="Images/pvt-logo.png" />
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-  <header>
+  <!-- Match homepage header -->
+  <header class="site-header">
     <div class="logo">
       <a href="index.html">
-        <img src="Images/PVT Logo copy.png" alt="Potomac Valet Trash Logo" class="logo-img">
+        <img src="Images/pvt-logo.png" alt="Potomac Valet Trash Logo" class="logo-img" />
         Potomac Valet Trash
       </a>
     </div>
 
-    <nav>
-      <button class="menu-toggle">&#9776;</button>
+    <nav aria-label="Primary">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+
       <div class="menu">
         <a href="index.html">Home</a>
 
         <div class="dropdown">
-          <a href="#">Services</a>
+          <a href="valet-trash.html" class="services-link" aria-haspopup="true" aria-expanded="false">Services</a>
           <div class="dropdown-content">
             <a href="valet-trash.html">Valet Trash</a>
             <a href="how-it-works.html">How It Works</a>
@@ -37,60 +43,164 @@
         </div>
 
         <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="nav-cta">Get Quote</a>
       </div>
     </nav>
 
     <div class="phone">Text or Call: <a href="tel:7035689373">703-568-9373</a></div>
   </header>
 
-  <!-- Hero Banner -->
-  <section class="residential-bg">
-    <h1>Valet Trash for Apartment Communities</h1>
-    <p>Doorstep trash pickup on scheduled nights—keeping hallways and walkways cleaner with less strain on your onsite team.</p>
-  </section>
+  <main>
+    <!-- Page Hero (uses your existing "hero hero--clean" styling) -->
+    <section class="hero hero--clean">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <span class="pill">Valet Trash • Apartment Communities</span>
+          <h1>Valet Trash That Keeps Your Property Clean</h1>
+          <p>
+            Doorstep pickup on scheduled nights (Monday–Friday) — cleaner hallways and walkways,
+            fewer complaints, and less strain on your onsite team.
+          </p>
 
-  <!-- About + Image Section -->
-  <section class="residential-info">
-    <div class="residential-text">
-      <h2>About Our Valet Trash Service</h2>
-      <p>
-        Potomac Valet Trash provides reliable doorstep trash collection for multi-family properties. Residents place
-        properly bagged trash outside their door during a designated pickup window, and our team collects it and
-        transports it to the property’s dumpsters or compactor area.
-      </p>
-      <p>
-        Valet trash helps reduce loose trash in common areas, improves property appearance, and gives maintenance teams
-        time back for higher-priority work. We align to your community rules (pickup times, bag limits, and cleanliness
-        standards) to ensure a smooth, consistent service.
-      </p>
-      <p>
-        Whether you have multiple buildings, stairwells, or walk-up units, we tailor the route and process to fit your
-        layout—without disrupting residents.
-      </p>
-      <p><strong>Want a quick quote and rollout plan for your property?</strong></p>
+          <div class="hero-actions">
+            <a
+              href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash%20service%20for%20my%20apartment%20community.%20Property%20name%3A%20%0AUnits%3A%20%0ABuildings%3A%20%0A"
+              class="btn btn-primary"
+            >
+              Request a Quote
+            </a>
+            <a href="how-it-works.html" class="btn btn-ghost">See how it works</a>
+          </div>
 
-      <a href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash%20service%20for%20my%20apartment%20community.%20Can%20you%20share%20pricing%20and%20next%20steps%3F" class="schedule-btn">
-        Request a Quote
-      </a>
-    </div>
+          <div class="trust-row">
+            <div class="trust-item">
+              <div class="trust-number">Mon–Fri</div>
+              <div class="trust-label">Service schedule</div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-number">On-site</div>
+              <div class="trust-label">Dumpsters/compactors</div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-number">Cleaner</div>
+              <div class="trust-label">Common areas</div>
+            </div>
+          </div>
+        </div>
 
-    <div class="residential-image">
-      <!-- Swap image when you have a valet trash photo -->
-      <img src="Images/RezPic.jpg" alt="Valet trash doorstep pickup service">
-    </div>
-  </section>
+        <!-- Optional image/card on the right (reuses your existing "hero-card") -->
+        <div class="hero-card">
+          <h3>What We Handle</h3>
+          <p class="muted">Simple, consistent scope for easy compliance.</p>
+
+          <div class="divider"></div>
+
+          <ul style="margin:0; padding-left: 1.15rem;">
+            <li>Bagged household trash only</li>
+            <li>Pickup during your set window</li>
+            <li>Transport to on-site dumpsters/compactors</li>
+            <li>Walk-ups, stairwells, breezeways</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <a
+            href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash%20service.%20Property%20name%3A%20%0AUnits%3A%20%0ABuildings%3A%20%0AStairs%20or%20elevators%3A%20"
+            class="btn btn-primary btn-full"
+          >
+            Get pricing
+          </a>
+
+          <p class="tiny muted" style="margin: 0.75rem 0 0;">Or call/text: <a href="tel:7035689373">703-568-9373</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main content -->
+    <section class="section">
+      <div class="container">
+        <div class="split">
+          <div class="card">
+            <h2 style="margin:0 0 0.5rem;">About Our Valet Trash Service</h2>
+
+            <p class="muted" style="margin:0 0 1rem;">
+              Potomac Valet Trash provides reliable doorstep trash collection for multi-family properties.
+              Residents place properly bagged trash outside their door during a designated window, and our team
+              collects it and disposes of it at your on-site waste area.
+            </p>
+
+            <p style="margin:0 0 1rem;">
+              Valet trash reduces loose trash in common areas, improves curb appeal, and gives maintenance teams
+              time back for higher-priority work. We follow your community rules for pickup times, bag limits,
+              and cleanliness standards to keep service smooth and consistent.
+            </p>
+
+            <p style="margin:0;">
+              Multiple buildings, stairwells, or walk-up units? No problem — we tailor routes to your layout
+              without disrupting residents.
+            </p>
+
+            <div class="divider"></div>
+
+            <a
+              href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20and%20rollout%20plan%20for%20valet%20trash.%20Property%20name%3A%20%0AUnits%3A%20%0ABuildings%3A%20%0A"
+              class="btn btn-primary"
+            >
+              Request a Quote
+            </a>
+          </div>
+
+          <div class="panel">
+            <!-- Keep your existing image -->
+            <img
+              src="Images/RezPic.jpg"
+              alt="Valet trash doorstep pickup service"
+              style="width:100%; height:auto; border-radius: 14px; display:block;"
+            />
+
+            <div class="divider"></div>
+
+            <h3 style="margin:0 0 0.25rem;">Good fit for:</h3>
+            <p class="muted" style="margin:0;">
+              Garden-style communities, multi-building properties, exterior walk-ups, stairwells, and breezeways.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA (reuses your existing CTA styling) -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-inner">
+          <div>
+            <h2 style="margin:0 0 0.25rem;">Want a quick quote?</h2>
+            <p class="muted" style="margin:0;">Send property name + units/buildings and we’ll reply fast.</p>
+          </div>
+
+          <a
+            href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash.%20Property%20name%3A%20%0AUnits%3A%20%0ABuildings%3A%20%0A"
+            class="btn btn-primary"
+          >
+            Get pricing
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2026 Potomac Valet Trash. All rights reserved.</p>
   </footer>
 
+  <!-- Mobile Menu Script (matches homepage) -->
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
 
     toggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
+      const isOpen = menu.classList.toggle('show');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   </script>
 
