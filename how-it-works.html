@@ -6,19 +6,18 @@
 
   <title>How It Works | Potomac Valet Trash</title>
 
-  <!-- No-space icon -->
   <link rel="icon" type="image/png" href="Images/pvt-logo.png" />
 
   <!-- Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- CSS (cache bust so changes show) -->
+  <link rel="stylesheet" href="css/style.css?v=11" />
 </head>
 
 <body>
 
-  <!-- Header matches homepage -->
+  <!-- Header -->
   <header class="site-header">
     <div class="logo">
       <a href="index.html">
@@ -53,143 +52,156 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero hero--clean">
-      <div class="hero-inner">
-        <div class="hero-copy">
-          <span class="pill">How It Works</span>
-          <h1>Simple, Consistent Doorstep Pickup</h1>
-          <p>
-            A clear set-out window, reliable routes, and clean common areas — without adding work to your onsite team.
-          </p>
-
-          <div class="hero-actions">
-            <a
-              href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash.%20Property%20name%3A%20%0AUnits%3A%20%0ABuildings%3A%20%0A"
-              class="btn btn-primary"
-            >
-              Request a Quote
-            </a>
-            <a href="pricing.html" class="btn btn-ghost">See pricing factors</a>
-          </div>
-
-          <div class="trust-row">
-            <div class="trust-item">
-              <div class="trust-number">Set-out</div>
-              <div class="trust-label">Resident window</div>
-            </div>
-            <div class="trust-item">
-              <div class="trust-number">Pickup</div>
-              <div class="trust-label">Scheduled nights</div>
-            </div>
-            <div class="trust-item">
-              <div class="trust-number">Dispose</div>
-              <div class="trust-label">On-site dumpsters</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <h3>What we handle</h3>
-          <p class="muted">Keep it simple and easy to enforce.</p>
-
-          <div class="divider"></div>
-
-          <ul style="margin:0; padding-left: 1.15rem;">
-            <li>Bagged household trash</li>
-            <li>Hallways, breezeways, exterior walk-ups</li>
-            <li>Transport to dumpsters/compactors</li>
-            <li>Multi-building routes</li>
-          </ul>
-
-          <div class="divider"></div>
-
-          <a
-            href="contact.html?message=Hi%2C%20can%20you%20send%20service%20details%20and%20pricing%20for%20valet%20trash%3F%20Property%20name%3A%20%0AUnits%3A%20%0ABuildings%3A%20%0A"
-            class="btn btn-primary btn-full"
-          >
-            Get details
-          </a>
-
-          <p class="tiny muted" style="margin: 0.75rem 0 0;">
-            Or call/text: <a href="tel:7035689373">703-568-9373</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- STEPS -->
-    <section class="section">
+    <!-- INTERNAL PAGE HERO -->
+    <section class="page-hero">
       <div class="container">
-        <h2 class="section-title">How the service works</h2>
-        <p class="section-subtitle">A predictable routine that’s easy for residents and staff.</p>
-
-        <div class="cards">
-          <div class="card">
-            <h3>1) Confirm details</h3>
-            <p class="muted">
-              We align on set-out window, pickup nights, bag requirements, and your dumpster/compactor access.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>2) Residents set out bags</h3>
-            <p class="muted">
-              Residents place properly tied, leak-free bags outside their door during the designated window.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>3) We collect + dispose</h3>
-            <p class="muted">
-              Our team collects from doors and transports trash to your on-site waste area — keeping common areas clean.
-            </p>
-          </div>
-        </div>
+        <h1>How It Works</h1>
+        <p class="lead">
+          A predictable routine with a clear set-out window, reliable routes, and clean common areas —
+          without adding work to your onsite team.
+        </p>
       </div>
     </section>
 
-    <!-- SPLIT SECTION -->
-    <section class="section">
+    <!-- PAGE BODY -->
+    <section class="page-wrap">
       <div class="container">
-        <div class="split">
-          <div class="card">
-            <h3 style="margin:0 0 .5rem;">Standards we follow</h3>
-            <ul style="margin:0; padding-left: 1.15rem;">
-              <li>Bagged household trash only</li>
-              <li>Pickup during scheduled window</li>
-              <li>Routes tailored to building layout</li>
-              <li>Clear missed-pickup process</li>
-            </ul>
+        <div class="page-grid">
 
-            <div class="divider"></div>
+          <!-- MAIN COLUMN -->
+          <div>
 
-            <p class="muted" style="margin:0;">
-              We help reduce loose trash, keep breezeways cleaner, and take nightly trash runs off maintenance.
-            </p>
+            <div class="card">
+              <h2 style="margin:0 0 .75rem;">The process (3 steps)</h2>
+
+              <div class="steps">
+                <div class="step">
+                  <div class="kicker">1) Confirm details</div>
+                  <p class="muted" style="margin:0;">
+                    We align on your set-out window, pickup nights, bag requirements, and dumpster/compactor access.
+                  </p>
+                </div>
+
+                <div class="step">
+                  <div class="kicker">2) Residents set out bags</div>
+                  <p class="muted" style="margin:0;">
+                    Residents place properly tied, leak-free bags outside their door during the designated window.
+                  </p>
+                </div>
+
+                <div class="step">
+                  <div class="kicker">3) We collect + dispose</div>
+                  <p class="muted" style="margin:0;">
+                    Our team collects from doors and transports trash to your on-site waste area — keeping common areas clean.
+                  </p>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+              <a
+                href="contact.html?message=Hi%2C%20I%27d%20like%20a%20quote%20for%20valet%20trash.%20Property%20name%3A%20%0AUnits%3A%20%0ABuildings%3A%20%0A"
+                class="btn btn-primary"
+              >
+                Request a Quote
+              </a>
+
+              <a href="pricing.html" class="btn btn-ghost" style="margin-left:.5rem;">
+                See pricing factors
+              </a>
+            </div>
+
+            <div style="height:1rem;"></div>
+
+            <div class="card">
+              <h2 style="margin:0 0 .75rem;">Standards we follow</h2>
+
+              <ul class="info-list">
+                <li>Bagged household trash only</li>
+                <li>Pickup during the scheduled window</li>
+                <li>Routes tailored to building layout</li>
+                <li>Clear missed-pickup process</li>
+              </ul>
+
+              <div class="divider"></div>
+
+              <p class="muted" style="margin:0;">
+                We help reduce loose trash, keep breezeways cleaner, and take nightly trash runs off maintenance.
+              </p>
+            </div>
+
+            <div style="height:1rem;"></div>
+
+            <div class="card">
+              <h2 style="margin:0 0 .75rem;">What residents need to do</h2>
+
+              <ul class="info-list">
+                <li>Set out tied, leak-free bags during the set-out window</li>
+                <li>Follow community rules (bag limits, prohibited items, container rules)</li>
+                <li>Keep door areas clear — no loose trash, open bags, or spills</li>
+              </ul>
+            </div>
+
           </div>
 
-          <div class="panel">
-            <img
-              src="Images/Brick.webp"
-              alt="Clean common areas and reliable pickup"
-              style="width:100%; height:auto; border-radius: 14px; display:block;"
-            />
-            <div class="divider"></div>
-            <p class="muted" style="margin:0;">
-              Designed for multi-family communities — garden-style, multi-building, walk-ups, and stairwells.
-            </p>
-          </div>
+          <!-- SIDEBAR COLUMN -->
+          <aside class="sticky-side">
+
+            <div class="side-card">
+              <h3>What we handle</h3>
+              <p class="muted" style="margin:.25rem 0 0;">
+                Keep it simple and easy to enforce.
+              </p>
+
+              <div class="divider"></div>
+
+              <ul class="info-list" style="margin-top:0;">
+                <li>Bagged household trash</li>
+                <li>Hallways, breezeways, exterior walk-ups</li>
+                <li>Transport to dumpsters/compactors</li>
+                <li>Multi-building routes</li>
+              </ul>
+
+              <div class="divider"></div>
+
+              <a
+                href="contact.html?message=Hi%2C%20can%20you%20send%20service%20details%20and%20pricing%20for%20valet%20trash%3F%20Property%20name%3A%20%0AUnits%3A%20%0ABuildings%3A%20%0A"
+                class="btn btn-primary btn-full"
+              >
+                Get details
+              </a>
+
+              <p class="tiny muted" style="margin:.75rem 0 0;">
+                Or call/text: <a href="tel:7035689373">703-568-9373</a>
+              </p>
+            </div>
+
+            <div style="height:1rem;"></div>
+
+            <div class="side-card">
+              <img
+                src="Images/Brick.webp"
+                alt="Clean common areas and reliable pickup"
+                style="width:100%; height:auto; border-radius: 14px; display:block;"
+              />
+              <div class="divider"></div>
+              <p class="muted" style="margin:0;">
+                Designed for multi-family communities — garden-style, multi-building, walk-ups, and stairwells.
+              </p>
+            </div>
+
+          </aside>
+
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- BOTTOM CTA -->
     <section class="cta">
       <div class="container">
         <div class="cta-inner">
           <div>
-            <h2 style="margin:0 0 0.25rem;">Want to get this running at your property?</h2>
+            <h2 style="margin:0 0 .25rem;">Want to get this running at your property?</h2>
             <p class="muted" style="margin:0;">Send property name + units/buildings and we’ll reply fast.</p>
           </div>
 
@@ -202,6 +214,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
