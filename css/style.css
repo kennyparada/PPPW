@@ -249,4 +249,148 @@ nav a:focus-visible,
 .mini-form input{
   padding: 0.8rem 0.9rem;
   border-radius: 12px;
-  bor
+  border: 1px solid rgba(15,23,42,0.16);
+  font-family: inherit;
+  width: 100%;
+}
+
+.grid2{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+
+/* =========================
+   Bottom sections styling
+   (Benefits / How it works / CTA)
+========================= */
+.section{
+  padding: 3.25rem 1.5rem;
+}
+
+.section-alt{
+  background: #f6f9f8;
+}
+
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title{
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+}
+
+.section-subtitle{
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+}
+
+.cards{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  text-align: left;
+}
+
+.card h3{ margin: 0 0 0.35rem; }
+.card p{ margin: 0; color: var(--muted); }
+
+.split{
+  display:grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.steps{
+  margin: 0 0 1rem;
+  padding-left: 1.15rem;
+  color: var(--text);
+}
+
+.steps li{ margin: 0.6rem 0; }
+
+.panel{
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+.divider{
+  height: 1px;
+  background: rgba(15,23,42,0.10);
+  margin: 1rem 0;
+}
+
+.cta{
+  padding: 2.25rem 1.5rem;
+  background: linear-gradient(90deg, rgba(111,207,151,0.22), rgba(255,204,0,0.16));
+}
+
+.cta-inner{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(15,23,42,0.10);
+  border-radius: 18px;
+  padding: 1.25rem 1.4rem;
+}
+
+/* Footer */
+footer{
+  background-color: var(--green);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Mobile Menu + responsive */
+@media (max-width: 920px){
+  .hero-inner{ grid-template-columns: 1fr; }
+  .split{ grid-template-columns: 1fr; }
+  .cards{ grid-template-columns: 1fr; }
+  .cta-inner{ flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 768px){
+  .menu-toggle{ display: block; }
+
+  /* stack header items */
+  header nav{ justify-content: flex-end; }
+  header .phone{ justify-content: flex-start; }
+
+  .menu{
+    display: none;
+    width: 100%;
+    background-color: var(--green);
+    padding-top: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .menu.show{ display: flex; }
+
+  .dropdown-content{
+    position: static;
+    box-shadow: none;
+    min-width: 100%;
+    border-radius: 12px;
+  }
+
+  .grid2{ grid-template-columns: 1fr; }
+}
