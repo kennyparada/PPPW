@@ -517,26 +517,18 @@ footer{
     position: static;
   }
 }
-  .site-header .logo-text{
-  font-size: 1.6rem;        /* Bigger */
-  font-weight: 700;
-  color: #0f172a;           /* Dark blue */
-  letter-spacing: 0.3px;
-}
 
-.site-header .logo a:hover .logo-text{
-  color: #0f172a;
-}
-
-/* FORCE logo text styling on desktop + mobile */
-header.site-header .logo .logo-text{
+/* Logo text on ALL pages */
+header .logo .logo-text{
   color: #0b2545;
   font-size: 1.75rem;
   font-weight: 800;
   letter-spacing: 0.3px;
+  line-height: 1;
 }
 
-header.site-header .logo a:hover .logo-text{
+header .logo a:hover .logo-text{
   color: #0b2545;
 }
+
 
